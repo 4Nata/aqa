@@ -14,24 +14,25 @@ public class LoginTest {
 
 	public void testUserIsAbleToLoginIntoApp() {
 
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator
-				+ "drivers" + File.separator + "chromedriver");
+		System.setProperty("webdriver.chrome.driver",
+				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
 
 		WebDriver driver = new ChromeDriver();
-		
+
 		driver.get("https://www.saucedemo.com");
-		
-		
+
 		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-		
+
 		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-		
+
 		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
-		
-		
-		
-		
+
+		String currentURL = driver.getCurrentUrl();
+
+		if (currentURL.equals("https://www.saucedemo.com/inventory.html")) {
+			System.out.println(currentURL + " - " + "User is successfully logged in");
+
+		}
 
 	}
-
 }
