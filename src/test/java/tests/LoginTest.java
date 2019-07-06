@@ -55,99 +55,7 @@ public class LoginTest {
 		soft.assertAll(); // checked all asserts even when 1st one is failed, the next one still will be
 							// checked
 
-		driver.close();
-	}
-
-	@Test
-	public void testUserIsNotAbleToLoginWithoutUsernameAndPassword() {
-
-		System.setProperty("webdriver.chrome.driver",
-				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
-
-		this.driver = new ChromeDriver();
-
-		driver.get("https://www.saucedemo.com");
-		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
-		WebElement error = driver.findElement(By.cssSelector("h3[data-test='error']"));
-
-		SoftAssert soft = new SoftAssert();
-
-		soft.assertTrue(error.isDisplayed());
-		soft.assertEquals(error.getText(), "Epic sadface: Username is required");
-		soft.assertAll();
-		driver.close();
-
-	}
-	
-	@Test
-	public void testUserIsNotAbleToLoginWithoutUsernsme () {
-		
-		System.setProperty("webdriver.chrome.driver",
-				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
-
-		this.driver = new ChromeDriver();
-
-		driver.get("https://www.saucedemo.com");
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
-		
-		WebElement error = driver.findElement(By.cssSelector("h3[data-test='error']"));
-		
-		SoftAssert soft = new SoftAssert();
-		
-		soft.assertTrue(error.isDisplayed());
-		soft.assertEquals(error.getText(), "Epic sadface: Username is required");
-		soft.assertAll();
-		driver.close();
-		
-		
-	}
-	
-	@Test
-	public void testUserIsNotAbleToLoginWithoutPassword () {
-		
-		System.setProperty("webdriver.chrome.driver",
-				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
-
-		this.driver = new ChromeDriver();
-
-		driver.get("https://www.saucedemo.com");
-		driver.findElement(By.id("user-name")).sendKeys("standard_user");
-		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
-		
-		WebElement error = driver.findElement(By.cssSelector("h3[data-test='error']"));
-		
-		SoftAssert soft = new SoftAssert();
-		
-		soft.assertTrue(error.isDisplayed());
-		soft.assertEquals(error.getText(), "Epic sadface: Password is required");
-		soft.assertAll();
-		driver.close();
-		
-		
-	}
-	
-	@Test
-	public void testLockedUserIsNotAbleToLogin () {
-		
-		System.setProperty("webdriver.chrome.driver",
-				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
-
-		this.driver = new ChromeDriver();
-
-		driver.get("https://www.saucedemo.com");
-		driver.findElement(By.id("user-name")).sendKeys("locked_out_user");
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
-		
-		WebElement error = driver.findElement(By.cssSelector("h3[data-test='error']"));
-		
-		SoftAssert soft = new SoftAssert();
-		
-		soft.assertTrue(error.isDisplayed());
-		soft.assertEquals(error.getText(), "Epic sadface: Sorry, this user has been locked out.");
-		soft.assertAll();
-		driver.close();
+//		driver.close();
 	}
 
 	@AfterClass(alwaysRun = true) // AlwaysRun annotation occurs after all tests are finished in this class
@@ -159,4 +67,3 @@ public class LoginTest {
 	}
 
 }
-
