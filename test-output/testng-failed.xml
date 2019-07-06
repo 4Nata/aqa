@@ -5,7 +5,8 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="testUserIsAbleToLoginIntoApp"/>
+          <include name="testLockedUserIsNotAbleToLogin"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>
