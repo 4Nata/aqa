@@ -1,81 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-07-07T10:40:33Z" name="Default suite" finished-at="2019-07-07T10:40:51Z" duration-ms="18196">
+  <suite started-at="2019-07-07T11:03:47Z" name="Default suite" finished-at="2019-07-07T11:03:49Z" duration-ms="2314">
     <groups>
     </groups>
-    <test started-at="2019-07-07T10:40:33Z" name="Default test" finished-at="2019-07-07T10:40:51Z" duration-ms="18196">
-      <class name="tests.LoginTest">
-        <test-method signature="testUserIsAbleToLoginIntoApp()[pri:0, instance:tests.LoginTest@6913c1fb]" started-at="2019-07-07T13:40:33Z" name="testUserIsAbleToLoginIntoApp" finished-at="2019-07-07T13:40:40Z" duration-ms="7396" status="PASS">
+    <test started-at="2019-07-07T11:03:47Z" name="Default test" finished-at="2019-07-07T11:03:49Z" duration-ms="2314">
+      <class name="tests.AddProductToTheCart">
+        <test-method signature="testUserIsAbleToLoginIntoApp()[pri:0, instance:tests.AddProductToTheCart@ae13544]" started-at="2019-07-07T14:03:47Z" name="testUserIsAbleToLoginIntoApp" finished-at="2019-07-07T14:03:49Z" duration-ms="2158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsAbleToLoginIntoApp -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTest@6913c1fb]" started-at="2019-07-07T13:40:40Z" name="closeBrowser" finished-at="2019-07-07T13:40:40Z" duration-ms="91" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.AddProductToTheCart@ae13544]" started-at="2019-07-07T14:03:49Z" name="closeBrowser" finished-at="2019-07-07T14:03:49Z" duration-ms="141" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.LoginTest -->
-      <class name="tests.LoginTestNegative_2">
-        <test-method signature="testUserIsNotAbleToLoginWithoutPassword()[pri:0, instance:tests.LoginTestNegative_2@66d18979]" started-at="2019-07-07T13:40:40Z" name="testUserIsNotAbleToLoginWithoutPassword" finished-at="2019-07-07T13:40:42Z" duration-ms="1385" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUserIsNotAbleToLoginWithoutPassword -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_2@66d18979]" started-at="2019-07-07T13:40:42Z" name="closeBrowser" finished-at="2019-07-07T13:40:42Z" duration-ms="81" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.LoginTestNegative_2 -->
-      <class name="tests.LoginTestNegative_3">
-        <test-method signature="testUserIsNotAbleToLoginWithoutUsernsme()[pri:0, instance:tests.LoginTestNegative_3@bccb269]" started-at="2019-07-07T13:40:42Z" name="testUserIsNotAbleToLoginWithoutUsernsme" finished-at="2019-07-07T13:40:43Z" duration-ms="1351" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUserIsNotAbleToLoginWithoutUsernsme -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_3@bccb269]" started-at="2019-07-07T13:40:43Z" name="closeBrowser" finished-at="2019-07-07T13:40:43Z" duration-ms="81" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.LoginTestNegative_3 -->
-      <class name="tests.LogOutTest">
-        <test-method signature="testUserIsAbleToLogOutFromTheApp()[pri:0, instance:tests.LogOutTest@609cd4d8]" started-at="2019-07-07T13:40:43Z" name="testUserIsAbleToLogOutFromTheApp" finished-at="2019-07-07T13:40:47Z" duration-ms="3301" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUserIsAbleToLogOutFromTheApp -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LogOutTest@609cd4d8]" started-at="2019-07-07T13:40:47Z" name="closeBrowser" finished-at="2019-07-07T13:40:47Z" duration-ms="86" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.LogOutTest -->
-      <class name="tests.LoginTestNegative_1">
-        <test-method signature="testUserIsNotAbleToLoginWithoutUsernameAndPassword()[pri:0, instance:tests.LoginTestNegative_1@17f7cd29]" started-at="2019-07-07T13:40:47Z" name="testUserIsNotAbleToLoginWithoutUsernameAndPassword" finished-at="2019-07-07T13:40:48Z" duration-ms="1246" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUserIsNotAbleToLoginWithoutUsernameAndPassword -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_1@17f7cd29]" started-at="2019-07-07T13:40:48Z" name="closeBrowser" finished-at="2019-07-07T13:40:48Z" duration-ms="76" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.LoginTestNegative_1 -->
-      <class name="tests.LoginTestNegative_4">
-        <test-method signature="testLockedUserIsNotAbleToLogin()[pri:0, instance:tests.LoginTestNegative_4@7d8704ef]" started-at="2019-07-07T13:40:48Z" name="testLockedUserIsNotAbleToLogin" finished-at="2019-07-07T13:40:50Z" duration-ms="1569" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLockedUserIsNotAbleToLogin -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_4@7d8704ef]" started-at="2019-07-07T13:40:50Z" name="closeBrowser" finished-at="2019-07-07T13:40:50Z" duration-ms="25" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.LoginTestNegative_4 -->
-      <class name="tests.LoginTestNegative_5">
-        <test-method signature="testUserIsNotAbleToLoginIntoAppWithWrongCredentials()[pri:0, instance:tests.LoginTestNegative_5@13b6aecc]" started-at="2019-07-07T13:40:50Z" name="testUserIsNotAbleToLoginIntoAppWithWrongCredentials" finished-at="2019-07-07T13:40:51Z" duration-ms="1399" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testUserIsNotAbleToLoginIntoAppWithWrongCredentials -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_5@13b6aecc]" started-at="2019-07-07T13:40:51Z" name="closeBrowser" finished-at="2019-07-07T13:40:51Z" duration-ms="80" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.LoginTestNegative_5 -->
+      </class> <!-- tests.AddProductToTheCart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

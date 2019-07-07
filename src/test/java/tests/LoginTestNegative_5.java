@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -33,11 +34,11 @@ public class LoginTestNegative_5 {
 
 		WebElement error = driver.findElement(By.cssSelector("h3[data-test='error']"));
 
-		SoftAssert soft = new SoftAssert();
+		
 
-		soft.assertTrue(error.isDisplayed());
-		soft.assertEquals(error.getText(), "Epic sadface: Username and password do not match any user in this service");
-		soft.assertAll();
+		Assert.assertTrue(error.isDisplayed());
+		Assert.assertEquals(error.getText(), "Epic sadface: Username and password do not match any user in this service");
+		
 
 	}
 
