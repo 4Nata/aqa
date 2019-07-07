@@ -4,6 +4,8 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,13 +19,13 @@ public class LogOutTest {
 
 	@Test // annotation which shows TestNG that this is a test described below
 
-	public void testUserIsAbleToLogOutFromTheApp() {
+	public void testUserIsAbleToLogOutFromTheApp() throws InterruptedException {
 
 		System.setProperty("webdriver.chrome.driver",
 				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
 
 		this.driver = new ChromeDriver();
-		
+
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		driver.get("https://www.saucedemo.com");
@@ -35,12 +37,19 @@ public class LogOutTest {
 		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
 
 		driver.findElement(By.cssSelector("div.bm-burger-button button")).click();
+		
+		WebElement element = driver.findElement(By.xpath("//nav[@class='bm-item-list']//a[contains(text(), 'Logout')]"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		Thread.sleep(500); 
+
 
 		driver.findElement(By.xpath("//nav[@class='bm-item-list']//a[contains(text(), 'Logout')]")).click();
-						
+
 //				driver.findElement(By.cssSelector("a[id='logout_sidebar_link']")).click();
 //              driver.findElement(By.xpath("//a[@id='logout_sidebar_link']")).click();
-				
+//				driver.findElement(By.cssSelector("#logout_sidebar_link")).click();
+
+//		driver.findElement(By.xpath("//a[@href='./index.html']")).click();
 
 		WebElement loginButton = driver.findElement(By.cssSelector("input[value='LOGIN'"));
 
@@ -53,10 +62,10 @@ public class LogOutTest {
 		soft.assertAll();
 
 	}
+
 	@AfterClass(alwaysRun = true)
 	public void closeBrowser() {
 		driver.quit();
 	}
 
 }
-
