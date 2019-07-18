@@ -9,17 +9,21 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class LogOutTest {
+public class LogOutTest extends GenericTest{
 
 	private WebDriver driver = null;
 
 	@Test // annotation which shows TestNG that this is a test described below
 
-	public void testUserIsAbleToLogOutFromTheApp() throws InterruptedException {
+	//throws InterruptedException
+	
+	public void testUserIsAbleToLogOutFromTheApp()  {
 
 		System.setProperty("webdriver.chrome.driver",
 				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
@@ -38,9 +42,21 @@ public class LogOutTest {
 
 		driver.findElement(By.cssSelector("div.bm-burger-button button")).click();
 		
-		WebElement element = driver.findElement(By.xpath("//nav[@class='bm-item-list']//a[contains(text(), 'Logout')]"));
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-		Thread.sleep(500); 
+		try {
+			Thread.sleep(1000);  // wait 1 sec before do smth
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		//ExplicityWait    wait 10 sec until it is clickable and then click
+		
+//		WebDriverWait waiter = new WebDriverWait(driver, 10); // wait 10 seconds    
+//		waiter.until(ExpectedConditions.elementToBeClickable(By.xpath("//nav[@class='bm-item-list']//a[contains(text(), 'Logout')]")));
+		
+//		WebElement element = driver.findElement(By.xpath("//nav[@class='bm-item-list']//a[contains(text(), 'Logout')]"));
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+//		Thread.sleep(500); 
 
 
 		driver.findElement(By.xpath("//nav[@class='bm-item-list']//a[contains(text(), 'Logout')]")).click();
@@ -63,9 +79,5 @@ public class LogOutTest {
 
 	}
 
-	@AfterClass(alwaysRun = true)
-	public void closeBrowser() {
-		driver.quit();
-	}
-
+	
 }

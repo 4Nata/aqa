@@ -11,32 +11,42 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class AddProductToTheCart {
+import pages.CartPage;
+import pages.LoginPage;
+import pages.ProductsPage;
+
+public class AddProductToTheCart extends GenericTest{
 	
-	private WebDriver driver = null;
+//	private WebDriver driver = null;
 
 	@Test // annotation which shows TestNG that this is a test described below
 
-	public void testUserIsAbleToLoginIntoApp() {
+	public void testUserIsAbleToAddProductToCart() {
+////
+////		System.setProperty("webdriver.chrome.driver",
+////				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
+////
+////		this.driver = new ChromeDriver();
+////		
+////		driver.get("https://www.saucedemo.com/inventory.html");
+////		driver.findElement(By.xpath("//button[contains(text(), 'ADD TO CART')]")).click();
+////		
+////		WebElement productOnCartIcon = driver.findElement(By.xpath("//span[@class='fa-layers-counter shopping_cart_badge' and contains(text(), '1')]"));
+////		
+////        
+////        
+////        Assert.assertTrue(productOnCartIcon.isDisplayed());
+//
+		
+		//ProductsPage productsPage = openLoginPage().loginAs("standard_user", "secret_sauce");
+		
+		
+		CartPage cartPage = openLoginPage().loginAs("standard_user", "secret_sauce").addProductToCart();
 
-		System.setProperty("webdriver.chrome.driver",
-				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
-
-		this.driver = new ChromeDriver();
-		
-		driver.get("https://www.saucedemo.com/inventory.html");
-		driver.findElement(By.xpath("//button[contains(text(), 'ADD TO CART')]")).click();
-		
-		WebElement productOnCartIcon = driver.findElement(By.xpath("//span[@class='fa-layers-counter shopping_cart_badge' and contains(text(), '1')]"));
-		
-        
-        
-        Assert.assertTrue(productOnCartIcon.isDisplayed());
-}
 	
-	@AfterClass(alwaysRun = true)
-	public void closeBrowser() {
-		driver.quit();
+	
+	
+	
 	}
-
+	
 }

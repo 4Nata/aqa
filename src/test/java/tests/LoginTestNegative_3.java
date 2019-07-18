@@ -11,38 +11,42 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class LoginTestNegative_3 {
+import pages.LoginPage;
 
-	private WebDriver driver = null;
+public class LoginTestNegative_3 extends GenericTest {
+
+//	private WebDriver driver = null;
 
 	@Test
-	public void testUserIsNotAbleToLoginWithoutUsernsme() {
+	public void testUserIsNotAbleToLoginWithoutUsername() {
 
-		System.setProperty("webdriver.chrome.driver",
-				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
-
-		this.driver = new ChromeDriver();
-
-		driver.get("https://www.saucedemo.com");
-		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
-
-		WebElement error = driver.findElement(By.cssSelector("h3[data-test='error']"));
-
-		
-
-		Assert.assertTrue(error.isDisplayed());
-		Assert.assertEquals(error.getText(), "Epic sadface: Username is required");
-		
+//		System.setProperty("webdriver.chrome.driver",
+//				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
+//
+//		this.driver = new ChromeDriver();
+//
+//		driver.get("https://www.saucedemo.com");
+//		driver.findElement(By.id("password")).sendKeys("secret_sauce");
+//		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
+//
+//		WebElement error = driver.findElement(By.cssSelector("h3[data-test='error']"));
+//
+//		
+//
+//		Assert.assertTrue(error.isDisplayed());
+//		Assert.assertEquals(error.getText(), "Epic sadface: Username is required");
+//		
 //		driver.close();
+		
+		openLoginPage();
+		
+		LoginPage.UserIsNotAbleToLoginWithoutUsername("secret_sauce");
+		
+		Assert.assertTrue(LoginPage.errorMessageWithoutLoginAndPassword.isDisplayed());
+		Assert.assertEquals(LoginPage.errorMessageWithoutLoginAndPassword.getText(),
+				"Epic sadface: Username is required");
 
 	}
 
-	@AfterClass(alwaysRun = true) // AlwaysRun annotation occurs after all tests are finished in this class
-	// (doesn't matter if they are failed or passed)
-	public void closeBrowser() {
-
-		driver.quit();
-	}
-
+	
 }

@@ -3,12 +3,12 @@
 <suite thread-count="-1" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="tests.LogOutTest">
+      <class name="tests.AddProductToTheCart">
         <methods>
-          <include name="testUserIsAbleToLogOutFromTheApp"/>
+          <include name="testUserIsAbleToAddProductToCart"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- tests.LogOutTest -->
+      </class> <!-- tests.AddProductToTheCart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
