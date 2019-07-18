@@ -36,10 +36,44 @@ public class ProductsPage {
 	@FindBy(xpath = "//button[contains(text(), 'ADD TO CART')]")
 	private WebElement addToCartButton;
 	
+	@FindBy(id = "#shopping_cart_container")
+	private WebElement shoppingCartContainer;
+	
+    @FindBy(css = "div.bm-burger-button button")
+    private WebElement menuButton;
+    
+    @FindBy(xpath = "//nav[@class='bm-item-list']//a[contains(text(), 'Logout')]")
+    private WebElement logoutButton;
+    
+    
+	
+	
 	public CartPage addProductToCart() {
 		
 		addToCartButton.click();
+		shoppingCartIcon.click();
 		return new CartPage(pageDriver);
+	}
+	
+	public CartPage addThreeProductsToCart() {
+		
+		addToCartButton.click();
+		addToCartButton.click();
+		addToCartButton.click();
+		
+		shoppingCartIcon.click();
+		
+		return new CartPage(pageDriver);
+	}
+	
+	public LoginPage logout() {
+		
+		
+		menuButton.click();
+		logoutButton.click();
+		
+		return new LoginPage(pageDriver);
+		
 	}
 	
 	

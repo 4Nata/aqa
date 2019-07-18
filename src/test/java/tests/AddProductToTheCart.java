@@ -42,6 +42,10 @@ public class AddProductToTheCart extends GenericTest{
 		
 		
 		CartPage cartPage = openLoginPage().loginAs("standard_user", "secret_sauce").addProductToCart();
+		
+		Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+		
+		
 
 	
 	

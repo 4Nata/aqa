@@ -33,7 +33,7 @@ public class AnnotationTest {
 	public void test() {
 
 		System.out.println("Test");
-		
+
 	}
 
 	@AfterMethod

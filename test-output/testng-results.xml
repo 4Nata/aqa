@@ -1,31 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="12" passed="10" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-07-18T13:01:43Z" name="Default suite" finished-at="2019-07-18T13:01:43Z" duration-ms="30">
+  <suite started-at="2019-07-18T20:13:25Z" name="Default suite" finished-at="2019-07-18T20:14:07Z" duration-ms="41708">
     <groups>
     </groups>
-    <test started-at="2019-07-18T13:01:43Z" name="Default test" finished-at="2019-07-18T13:01:43Z" duration-ms="30">
+    <test started-at="2019-07-18T20:13:25Z" name="Default test" finished-at="2019-07-18T20:14:07Z" duration-ms="41708">
+      <class name="tests.LoginTest">
+        <test-method signature="testUserIsAbleToLoginIntoApp()[pri:0, instance:tests.LoginTest@37883b97]" started-at="2019-07-18T23:13:25Z" name="testUserIsAbleToLoginIntoApp" finished-at="2019-07-18T23:13:29Z" duration-ms="4092" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserIsAbleToLoginIntoApp -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTest@37883b97]" started-at="2019-07-18T23:13:29Z" name="closeBrowser" finished-at="2019-07-18T23:13:29Z" duration-ms="87" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.LoginTest -->
       <class name="tests.AddProductToTheCart">
-        <test-method signature="testUserIsAbleToAddProductToCart()[pri:0, instance:tests.AddProductToTheCart@4009e306]" started-at="2019-07-18T16:01:43Z" name="testUserIsAbleToAddProductToCart" finished-at="2019-07-18T16:01:43Z" duration-ms="7" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerExceptionat tests.GenericTest.getDriver(GenericTest.java:22)at tests.GenericTest.openLoginPage(GenericTest.java:31)at tests.AddProductToTheCart.testUserIsAbleToAddProductToCart(AddProductToTheCart.java:44)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:566)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method signature="testUserIsAbleToAddProductToCart()[pri:0, instance:tests.AddProductToTheCart@6ab778a]" started-at="2019-07-18T23:13:47Z" name="testUserIsAbleToAddProductToCart" finished-at="2019-07-18T23:13:51Z" duration-ms="4406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsAbleToAddProductToCart -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.AddProductToTheCart@4009e306]" started-at="2019-07-18T16:01:43Z" name="closeBrowser" finished-at="2019-07-18T16:01:43Z" duration-ms="0" status="FAIL">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerExceptionat tests.GenericTest.closeBrowser(GenericTest.java:40)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:566)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:208)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.AddProductToTheCart@6ab778a]" started-at="2019-07-18T23:13:51Z" name="closeBrowser" finished-at="2019-07-18T23:13:52Z" duration-ms="133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- tests.AddProductToTheCart -->
+      <class name="tests.CheckoutFieldsValidation">
+        <test-method signature="testUserIsNotAbleToCompleteCheckoutWithEmptyFields()[pri:0, instance:tests.CheckoutFieldsValidation@77f80c04]" started-at="2019-07-18T23:13:35Z" name="testUserIsNotAbleToCompleteCheckoutWithEmptyFields" finished-at="2019-07-18T23:13:39Z" duration-ms="4424" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserIsNotAbleToCompleteCheckoutWithEmptyFields -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.CheckoutFieldsValidation@77f80c04]" started-at="2019-07-18T23:13:39Z" name="closeBrowser" finished-at="2019-07-18T23:13:39Z" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.CheckoutFieldsValidation -->
+      <class name="tests.LoginTestNegative_2">
+        <test-method signature="testUserIsNotAbleToLoginWithoutPassword()[pri:0, instance:tests.LoginTestNegative_2@1dac5ef]" started-at="2019-07-18T23:13:52Z" name="testUserIsNotAbleToLoginWithoutPassword" finished-at="2019-07-18T23:13:54Z" duration-ms="2948" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserIsNotAbleToLoginWithoutPassword -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_2@1dac5ef]" started-at="2019-07-18T23:13:54Z" name="closeBrowser" finished-at="2019-07-18T23:13:55Z" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.LoginTestNegative_2 -->
+      <class name="tests.LoginTestNegative_3">
+        <test-method signature="testUserIsNotAbleToLoginWithoutUsername()[pri:0, instance:tests.LoginTestNegative_3@5c90e579]" started-at="2019-07-18T23:13:39Z" name="testUserIsNotAbleToLoginWithoutUsername" finished-at="2019-07-18T23:13:42Z" duration-ms="2312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserIsNotAbleToLoginWithoutUsername -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_3@5c90e579]" started-at="2019-07-18T23:13:42Z" name="closeBrowser" finished-at="2019-07-18T23:13:42Z" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.LoginTestNegative_3 -->
+      <class name="tests.LogOutTest">
+        <test-method signature="testUserIsAbleToLogOutFromTheApp()[pri:0, instance:tests.LogOutTest@58ea606c]" started-at="2019-07-18T23:13:55Z" name="testUserIsAbleToLogOutFromTheApp" finished-at="2019-07-18T23:13:59Z" duration-ms="4445" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element is not clickable at point (-85, 121)  (Session info: chrome=75.0.3770.142)Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'System info: host: 'MacBook-Pro-Natalie.local', ip: '192.168.0.103', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '11.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: /var/folders/48/4nmq1c7j6xj...}, goog:chromeOptions: {debuggerAddress: localhost:51619}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}Session ID: 960e087ce478164fa583354be322390c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (-85, 121)  (Session info: chrome=75.0.3770.142)Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'System info: host: 'MacBook-Pro-Natalie.local', ip: '192.168.0.103', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '11.0.1'Driver info: org.openqa.selenium.chrome.ChromeDriverCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: /var/folders/48/4nmq1c7j6xj...}, goog:chromeOptions: {debuggerAddress: localhost:51619}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}Session ID: 960e087ce478164fa583354be322390cat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:566)at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)at com.sun.proxy.$Proxy16.click(Unknown Source)at pages.ProductsPage.logout(ProductsPage.java:73)at tests.LogOutTest.testUserIsAbleToLogOutFromTheApp(LogOutTest.java:31)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:566)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserIsAbleToLogOutFromTheApp -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LogOutTest@58ea606c]" started-at="2019-07-18T23:13:59Z" name="closeBrowser" finished-at="2019-07-18T23:13:59Z" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.LogOutTest -->
+      <class name="tests.AnnotationTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.AnnotationTest@38102d01]" started-at="2019-07-18T23:13:25Z" name="beforeSuite" finished-at="2019-07-18T23:13:25Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:tests.AnnotationTest@38102d01]" started-at="2019-07-18T23:14:02Z" name="beforeClass" finished-at="2019-07-18T23:14:02Z" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:tests.AnnotationTest@38102d01]" started-at="2019-07-18T23:14:02Z" name="beforeMethod" finished-at="2019-07-18T23:14:02Z" duration-ms="0" status="FAIL">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[Test ex]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: Test exat tests.AnnotationTest.beforeMethod(AnnotationTest.java:29)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:566)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeMethod(Invoker.java:516)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test()[pri:0, instance:tests.AnnotationTest@38102d01]" started-at="2019-07-18T23:14:02Z" name="test" finished-at="2019-07-18T23:14:02Z" duration-ms="0" status="SKIP">
+          <exception class="java.lang.IllegalStateException">
+            <message>
+              <![CDATA[Test ex]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalStateException: Test exat tests.AnnotationTest.beforeMethod(AnnotationTest.java:29)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)at java.base/java.lang.reflect.Method.invoke(Method.java:566)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)at org.testng.internal.Invoker.invokeMethod(Invoker.java:516)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalStateException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:tests.AnnotationTest@38102d01]" started-at="2019-07-18T23:14:02Z" name="afterMethod" finished-at="2019-07-18T23:14:02Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:tests.AnnotationTest@38102d01]" started-at="2019-07-18T23:14:02Z" name="afterClass" finished-at="2019-07-18T23:14:02Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:tests.AnnotationTest@38102d01]" started-at="2019-07-18T23:14:07Z" name="afterSuite" finished-at="2019-07-18T23:14:07Z" duration-ms="0" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- tests.AnnotationTest -->
+      <class name="tests.LoginTestNegative_1">
+        <test-method signature="testUserIsNotAbleToLoginWithoutUsernameAndPassword()[pri:0, instance:tests.LoginTestNegative_1@6f45df59]" started-at="2019-07-18T23:13:42Z" name="testUserIsNotAbleToLoginWithoutUsernameAndPassword" finished-at="2019-07-18T23:13:44Z" duration-ms="2383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserIsNotAbleToLoginWithoutUsernameAndPassword -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_1@6f45df59]" started-at="2019-07-18T23:13:44Z" name="closeBrowser" finished-at="2019-07-18T23:13:44Z" duration-ms="83" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.LoginTestNegative_1 -->
+      <class name="tests.LoginTestNegative_4">
+        <test-method signature="testLockedUserIsNotAbleToLogin()[pri:0, instance:tests.LoginTestNegative_4@38e79ae3]" started-at="2019-07-18T23:13:44Z" name="testLockedUserIsNotAbleToLogin" finished-at="2019-07-18T23:13:47Z" duration-ms="2810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLockedUserIsNotAbleToLogin -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_4@38e79ae3]" started-at="2019-07-18T23:13:47Z" name="closeBrowser" finished-at="2019-07-18T23:13:47Z" duration-ms="82" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.LoginTestNegative_4 -->
+      <class name="tests.LoginTestNegative_5">
+        <test-method signature="testUserIsNotAbleToLoginIntoAppWithWrongCredentials()[pri:0, instance:tests.LoginTestNegative_5@63070bab]" started-at="2019-07-18T23:13:59Z" name="testUserIsNotAbleToLoginIntoAppWithWrongCredentials" finished-at="2019-07-18T23:14:01Z" duration-ms="2383" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserIsNotAbleToLoginIntoAppWithWrongCredentials -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTestNegative_5@63070bab]" started-at="2019-07-18T23:14:01Z" name="closeBrowser" finished-at="2019-07-18T23:14:02Z" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.LoginTestNegative_5 -->
+      <class name="tests.CheckoutWithOneProduct">
+        <test-method signature="testUserIsAbleToPlaceOrderWithOneProduct()[pri:0, instance:tests.CheckoutWithOneProduct@68e5eea7]" started-at="2019-07-18T23:14:02Z" name="testUserIsAbleToPlaceOrderWithOneProduct" finished-at="2019-07-18T23:14:07Z" duration-ms="5072" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserIsAbleToPlaceOrderWithOneProduct -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.CheckoutWithOneProduct@68e5eea7]" started-at="2019-07-18T23:14:07Z" name="closeBrowser" finished-at="2019-07-18T23:14:07Z" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.CheckoutWithOneProduct -->
+      <class name="tests.CheckoutWithThreeProducts">
+        <test-method signature="testUserIsAbleToPlaceOrderWithThreeProducts()[pri:0, instance:tests.CheckoutWithThreeProducts@4e3958e7]" started-at="2019-07-18T23:13:29Z" name="testUserIsAbleToPlaceOrderWithThreeProducts" finished-at="2019-07-18T23:13:35Z" duration-ms="5393" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserIsAbleToPlaceOrderWithThreeProducts -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.CheckoutWithThreeProducts@4e3958e7]" started-at="2019-07-18T23:13:35Z" name="closeBrowser" finished-at="2019-07-18T23:13:35Z" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.CheckoutWithThreeProducts -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

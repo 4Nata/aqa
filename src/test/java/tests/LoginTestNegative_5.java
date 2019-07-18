@@ -13,7 +13,7 @@ import org.testng.asserts.SoftAssert;
 
 import pages.LoginPage;
 
-public class LoginTestNegative_5 extends GenericTest{
+public class LoginTestNegative_5 extends GenericTest {
 
 //	private WebDriver driver = null;
 
@@ -42,13 +42,13 @@ public class LoginTestNegative_5 extends GenericTest{
 //		Assert.assertEquals(error.getText(), "Epic sadface: Username and password do not match any user in this service");
 //		
 		openLoginPage();
-		
+
 		LoginPage.lockedAndNonExistedUserLoginIn("test_user", "test_password");
-		
+
 		Assert.assertTrue(LoginPage.errorMessageWithoutLoginAndPassword.isDisplayed());
-		Assert.assertEquals(LoginPage.errorMessageWithoutLoginAndPassword.getText(), "Epic sadface: Username and password do not match any user in this service");
+		Assert.assertEquals(LoginPage.errorMessageWithoutLoginAndPassword.getText(),
+				"Epic sadface: Username and password do not match any user in this service");
 
 	}
 
-	
 }

@@ -19,9 +19,9 @@ public class GenericTest {
 		System.setProperty("webdriver.chrome.driver",
 				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
 		this.driver = new ChromeDriver();
+
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		driver.get("https://www.saucedemo.com");
 	}
