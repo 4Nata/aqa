@@ -3,23 +3,12 @@
 <suite thread-count="-1" name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test name="Default test(failed)">
     <classes>
-      <class name="tests.AnnotationTest">
+      <class name="tests.LoginTest">
         <methods>
-          <include name="test"/>
-          <include name="beforeSuite"/>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="afterSuite"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- tests.AnnotationTest -->
-      <class name="tests.LogOutTest">
-        <methods>
-          <include name="testUserIsAbleToLogOutFromTheApp"/>
+          <include name="testUserIsAbleToLoginIntoApp"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- tests.LogOutTest -->
+      </class> <!-- tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

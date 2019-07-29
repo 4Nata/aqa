@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Login tests]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="2" parallel="tests" name="Success Login(failed)" verbose="0">
+    <classes>
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="testUserIsAbleToLoginIntoApp"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+    </classes>
+  </test> <!-- Success Login(failed) -->
+  <test thread-count="2" parallel="tests" name="Login_Negative scenarios(failed)" verbose="0">
+    <classes>
+      <class name="tests.LoginTestNegative_4">
+        <methods>
+          <include name="testLockedUserIsNotAbleToLogin"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTestNegative_4 -->
+      <class name="tests.LoginTestNegative_5">
+        <methods>
+          <include name="testUserIsNotAbleToLoginIntoAppWithWrongCredentials"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTestNegative_5 -->
+      <class name="tests.LoginTestNegative_1">
+        <methods>
+          <include name="testUserIsNotAbleToLoginWithoutUsernameAndPassword"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTestNegative_1 -->
+      <class name="tests.LoginTestNegative_3">
+        <methods>
+          <include name="testUserIsNotAbleToLoginWithoutUsername"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTestNegative_3 -->
+      <class name="tests.LoginTestNegative_2">
+        <methods>
+          <include name="testUserIsNotAbleToLoginWithoutPassword"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- tests.LoginTestNegative_2 -->
+    </classes>
+  </test> <!-- Login_Negative scenarios(failed) -->
+</suite> <!-- Failed suite [Login tests] -->

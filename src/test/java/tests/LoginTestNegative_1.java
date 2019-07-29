@@ -36,13 +36,12 @@ public class LoginTestNegative_1 extends GenericTest {
 //		
 //		driver.close();
 
-		openLoginPage();
+		LoginPage loginPage = openLoginPage().testLoginCredentials("", "");
 
-		LoginPage.loginButton.click();
-
-		Assert.assertTrue(LoginPage.errorMessageWithoutLoginAndPassword.isDisplayed());
-		Assert.assertEquals(LoginPage.errorMessageWithoutLoginAndPassword.getText(),
+		Assert.assertTrue(loginPage.errorMessageWithoutLoginAndPassword.isDisplayed());
+		Assert.assertEquals(loginPage.errorMessageWithoutLoginAndPassword.getText(),
 				"Epic sadface: Username is required");
+
 	}
 
 //	@AfterClass(alwaysRun = true) // AlwaysRun annotation occurs after all tests are finished in this class

@@ -38,12 +38,12 @@ public class LoginTestNegative_4 extends GenericTest {
 //		
 //		driver.close();
 
-		openLoginPage();
+		
 
-		LoginPage.lockedAndNonExistedUserLoginIn("locked_out_user", "secret_sauce");
+		LoginPage loginWithLockedUser = openLoginPage().testLoginCredentials("locked_out_user", "secret_sauce");
 
-		Assert.assertTrue(LoginPage.errorMessageWithoutLoginAndPassword.isDisplayed());
-		Assert.assertEquals(LoginPage.errorMessageWithoutLoginAndPassword.getText(),
+		Assert.assertTrue(loginWithLockedUser.errorMessageWithoutLoginAndPassword.isDisplayed());
+		Assert.assertEquals(loginWithLockedUser.errorMessageWithoutLoginAndPassword.getText(),
 				"Epic sadface: Sorry, this user has been locked out.");
 	}
 

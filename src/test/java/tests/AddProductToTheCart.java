@@ -41,7 +41,9 @@ public class AddProductToTheCart extends GenericTest{
 		//ProductsPage productsPage = openLoginPage().loginAs("standard_user", "secret_sauce");
 		
 		
-		CartPage cartPage = openLoginPage().loginAs("standard_user", "secret_sauce").addProductToCart();
+//		CartPage cartPage = openLoginPage().loginAs("standard_user", "secret_sauce").addProductToCart();
+		
+		CartPage cartPage = openLoginPage().loginAs("standard_user", "secret_sauce").addProductToCart("Sauce Labs Onesie", "Test.allTheThings() T-Shirt (Red)").openCart();
 		
 		Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
 		

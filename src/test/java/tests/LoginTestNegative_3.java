@@ -38,12 +38,12 @@ public class LoginTestNegative_3 extends GenericTest {
 //		
 //		driver.close();
 
-		openLoginPage();
+		
 
-		LoginPage.UserIsNotAbleToLoginWithoutUsername("secret_sauce");
+		LoginPage loginWithoutUsername = openLoginPage().testLoginCredentials("" , "secret_sauce");
 
-		Assert.assertTrue(LoginPage.errorMessageWithoutLoginAndPassword.isDisplayed());
-		Assert.assertEquals(LoginPage.errorMessageWithoutLoginAndPassword.getText(),
+		Assert.assertTrue(loginWithoutUsername.errorMessageWithoutLoginAndPassword.isDisplayed());
+		Assert.assertEquals(loginWithoutUsername.errorMessageWithoutLoginAndPassword.getText(),
 				"Epic sadface: Username is required");
 
 	}

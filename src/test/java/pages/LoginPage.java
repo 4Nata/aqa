@@ -16,16 +16,16 @@ public class LoginPage {
 	}
 
 	@FindBy(id = "user-name")
-	public static WebElement usernameInput;
+	public  WebElement usernameInput;
 
 	@FindBy(id = "password")
-	public static WebElement passwordInput;
+	public  WebElement passwordInput;
 
 	@FindBy(css = "input[value='LOGIN']")
-	public static WebElement loginButton;
+	public  WebElement loginButton;
 
 	@FindBy(css = "h3[data-test='error']")
-	public static WebElement errorMessageWithoutLoginAndPassword;
+	public WebElement errorMessageWithoutLoginAndPassword;
 
 //	public void loginAs(String username, String password) {
 //		
@@ -34,35 +34,37 @@ public class LoginPage {
 //		loginButton.click();
 //		
 
-	public ProductsPage loginAs(String username, String password) {
+	public ProductsPage loginAs(String usermame, String password) {
 
-		usernameInput.sendKeys(username);
-		passwordInput.sendKeys(password);
-		loginButton.click();
+		testLoginCredentials(usermame, password);
+
 		return new ProductsPage(pageDriver);
 
 	}
 
-	public static void UserIsNotAbleToLoginWithoutPassword(String usermame) {
+	public LoginPage testLoginCredentials(String usermame, String password) {
 
 		usernameInput.sendKeys(usermame);
+		passwordInput.sendKeys(password);
 		loginButton.click();
+		
+		return new LoginPage(pageDriver);
 //			return new LoginPage(errorMessageWithoutLoginAndPassword);
 
 	}
 
-	public static void UserIsNotAbleToLoginWithoutUsername(String password) {
+//	public static void UserIsNotAbleToLoginWithoutUsername(String password) {
+//
+//		passwordInput.sendKeys(password);
+//		loginButton.click();
 
-		passwordInput.sendKeys(password);
-		loginButton.click();
+//	}
 
-	}
-	
-	public static void lockedAndNonExistedUserLoginIn(String username, String password) {
-		usernameInput.sendKeys(username);
-		passwordInput.sendKeys(password);
-		loginButton.click();
-		
-	}
+//	public static void lockedAndNonExistedUserLoginIn(String username, String password) {
+//		usernameInput.sendKeys(username);
+//		passwordInput.sendKeys(password);
+//		loginButton.click();
+//		
+//	}
 
 }

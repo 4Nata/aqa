@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import org.testng.reporters.jq.Main;
 
+import com.google.common.collect.Ordering;
+
 import pages.LoginPage;
 import pages.ProductsPage;
 
@@ -34,6 +36,11 @@ public class LoginTest extends GenericTest{   //extends GenericTest Логін �
 //		LoginPage loginPage = new LoginPage(driver);
 		
 		ProductsPage productsPage = openLoginPage().loginAs("standard_user", "secret_sauce");
+		
+		
+				
+		
+		
 		
 		 
 		

@@ -38,12 +38,12 @@ public class LoginTestNegative_2 extends GenericTest {
 //		
 //		driver.close();
 		
-		openLoginPage();
 		
-		LoginPage.UserIsNotAbleToLoginWithoutPassword("standard_user");
 		
-		Assert.assertTrue(LoginPage.errorMessageWithoutLoginAndPassword.isDisplayed());
-		Assert.assertEquals(LoginPage.errorMessageWithoutLoginAndPassword.getText(),
+		LoginPage loginWithoutPassword = openLoginPage().testLoginCredentials("standard_user", "");
+		
+		Assert.assertTrue(loginWithoutPassword.errorMessageWithoutLoginAndPassword.isDisplayed());
+		Assert.assertEquals(loginWithoutPassword.errorMessageWithoutLoginAndPassword.getText(),
 				"Epic sadface: Password is required");
 
 	}

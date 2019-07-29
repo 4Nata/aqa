@@ -20,7 +20,7 @@ import pages.LoginPage;
 
 public class LogOutTest extends GenericTest {
 
-	private WebDriver driver = null;
+
 
 	@Test // annotation which shows TestNG that this is a test described below
 
@@ -30,7 +30,7 @@ public class LogOutTest extends GenericTest {
 
 		LoginPage logout = openLoginPage().loginAs("standard_user", "secret_sauce").logout();
 
-		Assert.assertTrue(LoginPage.loginButton.isDisplayed());
+		Assert.assertTrue(logout.loginButton.isDisplayed());
 
 	}
 

@@ -27,7 +27,7 @@ public class CheckoutStepOne {
 	private WebElement continueButton;
 
 	@FindBy(xpath = "//h3[@data-test='error']")
-	public static WebElement errorMessage;
+	public WebElement errorMessage;
 
 	public CheckoutStepTwo continueCheckout(String firstName, String lastName, String postalCode) {
 
@@ -40,41 +40,18 @@ public class CheckoutStepOne {
 
 	}
 
-	public CheckoutStepOne emptyCheckoutFields() {
+	public CheckoutStepOne checkoutFieldsValidation(String firstName, String lastName, String postalCode) {
 
-		continueButton.click();
-		return new CheckoutStepOne(pageDriver);
-
-	}
-
-	public CheckoutStepOne CheckoutFieldsWithoutFirstName(String lastName, String postalCode) {
-
+		firstNameInput.sendKeys(firstName);
 		lastNameInput.sendKeys(lastName);
 		postalCodeInput.sendKeys(postalCode);
 		continueButton.click();
-		return new CheckoutStepOne(pageDriver);
+
+		return this;
 
 	}
 
-	public CheckoutStepOne CheckoutFieldsWithoutLastName(String firstName, String postalCode) {
-
-		firstNameInput.sendKeys(firstName);
-		postalCodeInput.sendKeys(postalCode);
-		continueButton.click();
-		return new CheckoutStepOne(pageDriver);
-
-	}
-
-	public CheckoutStepOne CheckoutFieldsWithoutPostalCode(String firstName, String lastName) {
-
-		firstNameInput.sendKeys(firstName);
-		postalCodeInput.sendKeys(lastName);
-		continueButton.click();
-		return new CheckoutStepOne(pageDriver);
-
-	}
-
-	public static String getErrorMessageText() {
+	public String getErrorMessageText() {
 
 		String errorMessageText = errorMessage.getText();
 
