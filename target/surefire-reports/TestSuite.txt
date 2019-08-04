@@ -1,28 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.341 sec <<< FAILURE! - in TestSuite
-testUserIsNotAbleToLoginWithoutUsernameAndPassword(tests.LoginTestNegative_1)  Time elapsed: 0.008 sec  <<< FAILURE!
-java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.LoginTestNegative_1.testUserIsNotAbleToLoginWithoutUsernameAndPassword(LoginTestNegative_1.java:39)
-
-testUserIsAbleToLoginIntoApp(tests.LoginTest)  Time elapsed: 0.009 sec  <<< FAILURE!
-java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.LoginTest.testUserIsAbleToLoginIntoApp(LoginTest.java:38)
-
-testUserIsNotAbleToLoginWithoutPassword(tests.LoginTestNegative_2)  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.LoginTestNegative_2.testUserIsNotAbleToLoginWithoutPassword(LoginTestNegative_2.java:43)
-
-testUserIsNotAbleToLoginWithoutUsername(tests.LoginTestNegative_3)  Time elapsed: 0 sec  <<< FAILURE!
-java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.LoginTestNegative_3.testUserIsNotAbleToLoginWithoutUsername(LoginTestNegative_3.java:43)
-
-testLockedUserIsNotAbleToLogin(tests.LoginTestNegative_4)  Time elapsed: 0.001 sec  <<< FAILURE!
-java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.LoginTestNegative_4.testLockedUserIsNotAbleToLogin(LoginTestNegative_4.java:43)
-
-testUserIsNotAbleToLoginIntoAppWithWrongCredentials(tests.LoginTestNegative_5)  Time elapsed: 0.001 sec  <<< FAILURE!
-java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.LoginTestNegative_5.testUserIsNotAbleToLoginIntoAppWithWrongCredentials(LoginTestNegative_5.java:46)
-
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.312 s - in TestSuite

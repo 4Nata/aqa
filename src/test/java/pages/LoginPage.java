@@ -5,14 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import tests.GenericTest;
+import app.WebApp;
+import io.qameta.allure.Step;
 
-public class LoginPage {
+public class LoginPage  extends GenericPage {
 	private WebDriver pageDriver;
 
-	public LoginPage(WebDriver driver) {
-		this.pageDriver = driver;
-		PageFactory.initElements(driver, this);
+	public LoginPage() {
+		this.pageDriver = WebApp.getBrowser();
+		PageFactory.initElements(pageDriver, this);
 	}
 
 	@FindBy(id = "user-name")
@@ -34,11 +35,13 @@ public class LoginPage {
 //		loginButton.click();
 //		
 
+	
+	@Step("Login as with username {0} and password{1}")
 	public ProductsPage loginAs(String usermame, String password) {
 
 		testLoginCredentials(usermame, password);
 
-		return new ProductsPage(pageDriver);
+		return new ProductsPage();
 
 	}
 
@@ -48,7 +51,7 @@ public class LoginPage {
 		passwordInput.sendKeys(password);
 		loginButton.click();
 		
-		return new LoginPage(pageDriver);
+		return new LoginPage();
 //			return new LoginPage(errorMessageWithoutLoginAndPassword);
 
 	}

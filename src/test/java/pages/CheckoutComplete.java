@@ -3,13 +3,15 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class CheckoutComplete {
+import app.WebApp;
+
+public class CheckoutComplete extends GenericPage  {
 
 	private WebDriver pageDriver;
 
-	public CheckoutComplete(WebDriver driver) {
-		this.pageDriver = driver;
-		PageFactory.initElements(driver, this);
+	public CheckoutComplete() {
+		this.pageDriver = WebApp.getBrowser();
+		PageFactory.initElements(pageDriver, this);
 	}
 
 }

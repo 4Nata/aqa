@@ -14,12 +14,16 @@ import org.testng.reporters.jq.Main;
 
 import com.google.common.collect.Ordering;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.LoginPage;
 import pages.ProductsPage;
 
 public class LoginTest extends GenericTest{   //extends GenericTest Логін наслідує GenericTest
 
 	
+@Feature("Login")
+@Story("PLH-444")
 
 	@Test // annotation which shows TestNG that this is a test described below
 

@@ -5,13 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CheckoutStepTwo {
+import app.WebApp;
+
+public class CheckoutStepTwo extends GenericPage  {
 	
 private WebDriver pageDriver;
 	
-	public CheckoutStepTwo (WebDriver driver) {
-		this.pageDriver = driver;
-		PageFactory.initElements(driver, this);
+	public CheckoutStepTwo () {
+		this.pageDriver = WebApp.getBrowser();
+		PageFactory.initElements(pageDriver, this);
 	}
 	
 @FindBy(xpath = "//a[contains(text (), 'FINISH')]")	
@@ -21,7 +23,7 @@ private WebElement finishButton;
 	
 	finishButton.click();
 	
-	return  new CheckoutComplete(pageDriver);
+	return  new CheckoutComplete();
 }
 
 }

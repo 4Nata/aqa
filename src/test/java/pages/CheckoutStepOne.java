@@ -5,13 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CheckoutStepOne {
+import app.WebApp;
+
+public class CheckoutStepOne extends GenericPage  {
 
 	private WebDriver pageDriver;
 
-	public CheckoutStepOne(WebDriver driver) {
-		this.pageDriver = driver;
-		PageFactory.initElements(driver, this);
+	public CheckoutStepOne() {
+		this.pageDriver = WebApp.getBrowser();
+		PageFactory.initElements(pageDriver, this);
 	}
 
 	@FindBy(id = "first-name")
@@ -36,7 +38,7 @@ public class CheckoutStepOne {
 		postalCodeInput.sendKeys(postalCode);
 		continueButton.click();
 
-		return new CheckoutStepTwo(pageDriver);
+		return new CheckoutStepTwo();
 
 	}
 

@@ -17,13 +17,15 @@ import org.testng.Assert;
 
 import com.google.common.collect.Ordering;
 
-public class ProductsPage {
+import app.WebApp;
+
+public class ProductsPage extends GenericPage {
 
 	private WebDriver pageDriver;
 
-	public ProductsPage(WebDriver driver) {
-		this.pageDriver = driver;
-		PageFactory.initElements(driver, this);
+	public ProductsPage() {
+		this.pageDriver = WebApp.getBrowser();
+		PageFactory.initElements(pageDriver, this);
 	}
 
 	@FindBy(id = "shopping_cart_container")
@@ -127,12 +129,13 @@ public class ProductsPage {
 		}
 		return this;
 	}
-
+	
+	
 	public CartPage openCart() {
 
 		shoppingCartIcon.click();
 
-		return new CartPage(pageDriver);
+		return new CartPage();
 	}
 
 	public CartPage addThreeProductsToCart() {
@@ -143,7 +146,7 @@ public class ProductsPage {
 
 		shoppingCartIcon.click();
 
-		return new CartPage(pageDriver);
+		return new CartPage();
 	}
 
 	public LoginPage logout() {
@@ -152,11 +155,11 @@ public class ProductsPage {
 
 		WebDriverWait waiter = new WebDriverWait(pageDriver, 20); // wait 10 seconds
 		waiter.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//nav[@class='bm-item-list']//a[contains(text(), 'Logout')]")));
+				.elementToBeClickable(logoutButton));
 
 		logoutButton.click();
 
-		return new LoginPage(pageDriver);
+		return new LoginPage();
 
 	}
 

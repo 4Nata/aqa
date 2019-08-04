@@ -11,12 +11,13 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import app.WebApp;
 import pages.CartPage;
 import pages.LoginPage;
 import pages.ProductsPage;
 
-public class AddProductToTheCart extends GenericTest{
-	
+public class AddProductToTheCart extends GenericTest {
+
 //	private WebDriver driver = null;
 
 	@Test // annotation which shows TestNG that this is a test described below
@@ -37,22 +38,17 @@ public class AddProductToTheCart extends GenericTest{
 ////        
 ////        Assert.assertTrue(productOnCartIcon.isDisplayed());
 //
-		
-		//ProductsPage productsPage = openLoginPage().loginAs("standard_user", "secret_sauce");
-		
-		
-//		CartPage cartPage = openLoginPage().loginAs("standard_user", "secret_sauce").addProductToCart();
-		
-		CartPage cartPage = openLoginPage().loginAs("standard_user", "secret_sauce").addProductToCart("Sauce Labs Onesie", "Test.allTheThings() T-Shirt (Red)").openCart();
-		
-		Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/cart.html");
-		
-		
 
-	
-	
-	
-	
+		// ProductsPage productsPage = openLoginPage().loginAs("standard_user",
+		// "secret_sauce");
+
+//		CartPage cartPage = openLoginPage().loginAs("standard_user", "secret_sauce").addProductToCart();
+
+		CartPage cartPage = openLoginPage().loginAs("standard_user", "secret_sauce")
+				.addProductToCart("Sauce Labs Onesie", "Test.allTheThings() T-Shirt (Red)").openCart();
+
+		Assert.assertEquals(WebApp.getBrowser().getCurrentUrl(), "https://www.saucedemo.com/cart.html");
+
 	}
-	
+
 }

@@ -9,72 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Login tests</th></tr>
-<tr><td><a href="#t0">Success Login</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">28</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Login_Negative scenarios</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">5</td><td class="num">31</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num attn">6</th><th class="num">59</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">Success Login</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">4 433</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Login_Negative scenarios</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">9 939</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">6</th><th class="num">0</th><th class="num">0</th><th class="num">14 372</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Login tests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Success Login &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">testUserIsAbleToLoginIntoApp</a></td><td rowspan="1">1564167843806</td><td rowspan="1">5</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Login_Negative scenarios &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.LoginTestNegative_1</td><td><a href="#m1">testUserIsNotAbleToLoginWithoutUsernameAndPassword</a></td><td rowspan="1">1564167843806</td><td rowspan="1">5</td></tr><tr class="failedodd"><td rowspan="1">tests.LoginTestNegative_2</td><td><a href="#m2">testUserIsNotAbleToLoginWithoutPassword</a></td><td rowspan="1">1564167843817</td><td rowspan="1">0</td></tr><tr class="failedeven"><td rowspan="1">tests.LoginTestNegative_3</td><td><a href="#m3">testUserIsNotAbleToLoginWithoutUsername</a></td><td rowspan="1">1564167843818</td><td rowspan="1">0</td></tr><tr class="failedodd"><td rowspan="1">tests.LoginTestNegative_4</td><td><a href="#m4">testLockedUserIsNotAbleToLogin</a></td><td rowspan="1">1564167843818</td><td rowspan="1">0</td></tr><tr class="failedeven"><td rowspan="1">tests.LoginTestNegative_5</td><td><a href="#m5">testUserIsNotAbleToLoginIntoAppWithWrongCredentials</a></td><td rowspan="1">1564167843819</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Login tests</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Success Login &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.LoginTest</td><td><a href="#m0">testUserIsAbleToLoginIntoApp</a></td><td rowspan="1">1564773859678</td><td rowspan="1">3520</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Login_Negative scenarios &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">tests.LoginTestNegative_1</td><td><a href="#m1">testUserIsNotAbleToLoginWithoutUsernameAndPassword</a></td><td rowspan="1">1564773864130</td><td rowspan="1">1365</td></tr><tr class="passedodd"><td rowspan="1">tests.LoginTestNegative_2</td><td><a href="#m2">testUserIsNotAbleToLoginWithoutPassword</a></td><td rowspan="1">1564773866037</td><td rowspan="1">1505</td></tr><tr class="passedeven"><td rowspan="1">tests.LoginTestNegative_3</td><td><a href="#m3">testUserIsNotAbleToLoginWithoutUsername</a></td><td rowspan="1">1564773868091</td><td rowspan="1">1473</td></tr><tr class="passedodd"><td rowspan="1">tests.LoginTestNegative_4</td><td><a href="#m4">testLockedUserIsNotAbleToLogin</a></td><td rowspan="1">1564773870107</td><td rowspan="1">1429</td></tr><tr class="passedeven"><td rowspan="1">tests.LoginTestNegative_5</td><td><a href="#m5">testUserIsNotAbleToLoginIntoAppWithWrongCredentials</a></td><td rowspan="1">1564773872068</td><td rowspan="1">1462</td></tr></tbody>
 </table>
-<h2>Success Login</h2><h3 id="m0">tests.LoginTest#testUserIsAbleToLoginIntoApp</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.GenericTest.getBrowser(GenericTest.java:69)
-	at tests.GenericTest.getDriver(GenericTest.java:110)
-	at tests.GenericTest.openLoginPage(GenericTest.java:119)
-	at tests.LoginTest.testUserIsAbleToLoginIntoApp(LoginTest.java:38)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Login_Negative scenarios</h2><h3 id="m1">tests.LoginTestNegative_1#testUserIsNotAbleToLoginWithoutUsernameAndPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.GenericTest.getBrowser(GenericTest.java:69)
-	at tests.GenericTest.getDriver(GenericTest.java:110)
-	at tests.GenericTest.openLoginPage(GenericTest.java:119)
-	at tests.LoginTestNegative_1.testUserIsNotAbleToLoginWithoutUsernameAndPassword(LoginTestNegative_1.java:39)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.LoginTestNegative_2#testUserIsNotAbleToLoginWithoutPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.GenericTest.getBrowser(GenericTest.java:69)
-	at tests.GenericTest.getDriver(GenericTest.java:110)
-	at tests.GenericTest.openLoginPage(GenericTest.java:119)
-	at tests.LoginTestNegative_2.testUserIsNotAbleToLoginWithoutPassword(LoginTestNegative_2.java:43)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.LoginTestNegative_3#testUserIsNotAbleToLoginWithoutUsername</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.GenericTest.getBrowser(GenericTest.java:69)
-	at tests.GenericTest.getDriver(GenericTest.java:110)
-	at tests.GenericTest.openLoginPage(GenericTest.java:119)
-	at tests.LoginTestNegative_3.testUserIsNotAbleToLoginWithoutUsername(LoginTestNegative_3.java:43)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.LoginTestNegative_4#testLockedUserIsNotAbleToLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.GenericTest.getBrowser(GenericTest.java:69)
-	at tests.GenericTest.getDriver(GenericTest.java:110)
-	at tests.GenericTest.openLoginPage(GenericTest.java:119)
-	at tests.LoginTestNegative_4.testLockedUserIsNotAbleToLogin(LoginTestNegative_4.java:43)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.LoginTestNegative_5#testUserIsNotAbleToLoginIntoAppWithWrongCredentials</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: You cannot  start the site on macOS
-	at tests.GenericTest.getBrowser(GenericTest.java:69)
-	at tests.GenericTest.getDriver(GenericTest.java:110)
-	at tests.GenericTest.openLoginPage(GenericTest.java:119)
-	at tests.LoginTestNegative_5.testUserIsNotAbleToLoginIntoAppWithWrongCredentials(LoginTestNegative_5.java:46)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Success Login</h2><h3 id="m0">tests.LoginTest#testUserIsAbleToLoginIntoApp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Login_Negative scenarios</h2><h3 id="m1">tests.LoginTestNegative_1#testUserIsNotAbleToLoginWithoutUsernameAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.LoginTestNegative_2#testUserIsNotAbleToLoginWithoutPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.LoginTestNegative_3#testUserIsNotAbleToLoginWithoutUsername</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.LoginTestNegative_4#testLockedUserIsNotAbleToLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.LoginTestNegative_5#testUserIsNotAbleToLoginIntoAppWithWrongCredentials</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
