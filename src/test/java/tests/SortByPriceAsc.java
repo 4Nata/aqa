@@ -7,10 +7,15 @@ import org.testng.annotations.Test;
 
 import com.google.common.collect.Ordering;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.ProductsPage;
 
 public class SortByPriceAsc extends GenericTest{
 	
+	
+	@Feature("Products Sorting")
+	@Story("PLH-455")
 	@Test
 	public void testSortByPriceAsc() {
 		

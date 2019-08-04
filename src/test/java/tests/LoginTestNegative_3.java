@@ -11,12 +11,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.LoginPage;
 
 public class LoginTestNegative_3 extends GenericTest {
 
 //	private WebDriver driver = null;
 
+	
+
+	@Feature("Login without USERNAME")
+	@Story("PLH-449")
 	@Test
 	public void testUserIsNotAbleToLoginWithoutUsername() {
 

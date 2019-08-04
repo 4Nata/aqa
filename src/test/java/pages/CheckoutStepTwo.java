@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import app.WebApp;
+import io.qameta.allure.Step;
 
 public class CheckoutStepTwo extends GenericPage  {
 	
@@ -19,7 +20,8 @@ private WebDriver pageDriver;
 @FindBy(xpath = "//a[contains(text (), 'FINISH')]")	
 private WebElement finishButton;
 
-	public CheckoutComplete checkoutComplete() {
+@Step("Complete the Checkout")	
+public CheckoutComplete checkoutComplete() {
 	
 	finishButton.click();
 	

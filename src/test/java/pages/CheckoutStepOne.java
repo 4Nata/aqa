@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import app.WebApp;
+import io.qameta.allure.Step;
 
 public class CheckoutStepOne extends GenericPage  {
 
@@ -31,6 +32,7 @@ public class CheckoutStepOne extends GenericPage  {
 	@FindBy(xpath = "//h3[@data-test='error']")
 	public WebElement errorMessage;
 
+	@Step("Fill in Customer Information & click [Continue] button")
 	public CheckoutStepTwo continueCheckout(String firstName, String lastName, String postalCode) {
 
 		firstNameInput.sendKeys(firstName);
@@ -42,6 +44,7 @@ public class CheckoutStepOne extends GenericPage  {
 
 	}
 
+	@Step("Fill in the Checkout fields & click [Continue] button")
 	public CheckoutStepOne checkoutFieldsValidation(String firstName, String lastName, String postalCode) {
 
 		firstNameInput.sendKeys(firstName);

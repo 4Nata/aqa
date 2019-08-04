@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="smoke" parallel="tests" thread-count="2">
+	<test name="Success Login">
+		<classes>
+			<class name="tests.LoginTest" />
+		</classes>
+	</test>
+	<test name="Login_Negative scenarios">
+		<classes>
+			<class name="tests.LoginTestNegative_1" />
+			<class name="tests.LoginTestNegative_2" />
+			<class name="tests.LoginTestNegative_3" />
+			<class name="tests.LoginTestNegative_4" />
+			<class name="tests.LoginTestNegative_5" />
+		</classes>
+
+	</test>
+	<test name="Adding products to the Cart">
+		<classes>
+			<class name="tests.AddProductToTheCart" />
+		</classes>
+	</test>
+
+	<test name="Checkout">
+		<classes>
+			<class name="tests.CheckoutWithOneProduct" />
+			<class name="tests.CheckoutWithThreeProducts" />
+			<class name="tests.CheckoutFieldsValidation" />
+		</classes>
+	</test>
+
+	<test name="Sorting Products">
+		<classes>
+			<class name="tests.SortByNamesAsc">
+				<class name="tests.SortByNamesDesc">
+					<class name="tests.SortByPriceAsc">
+						<class name="tests.SortByPriceDesc">
+		</classes>
+	</test>
+
+
+</suite>

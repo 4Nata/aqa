@@ -1,7 +1,6 @@
 package pages;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -13,11 +12,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import com.google.common.collect.Ordering;
 
 import app.WebApp;
+import io.qameta.allure.Step;
 
 public class ProductsPage extends GenericPage {
 
@@ -58,12 +55,14 @@ public class ProductsPage extends GenericPage {
 
 	}
 	
+	@Step("Sort Products By Names Asc")
 	public ProductsPage sortByNamesAsc() {
 		Select select = new Select(sortDropdown);
 		select.selectByValue("az");
 		return this;
 	}
 	
+	@Step("Sort Products By Names Desc")
 	public ProductsPage sortByNamesDesc() {
 		Select select = new Select(sortDropdown);
 		select.selectByValue("za");
@@ -88,12 +87,15 @@ public class ProductsPage extends GenericPage {
 	@FindBy(css = ".product_sort_container")
 	private WebElement sortDropdown;
 
+	
+	@Step("Sort Products By Prices Asc")
 	public ProductsPage sortByPriceAsc() {
 		Select select = new Select(sortDropdown);
 		select.selectByValue("lohi");
 		return this;
 	}
 	
+	@Step("Sort Products By Prices Desc")
 	public ProductsPage sortByPriceDesc() {
 		Select select = new Select(sortDropdown);
 		select.selectByValue("hilo");
@@ -113,6 +115,8 @@ public class ProductsPage extends GenericPage {
 	private WebElement logoutButton;
 
 	// (List<String> productNames)
+	
+	@Step("Add Product To The Cart")
 	public ProductsPage addProductToCart(String... productNames) {
 
 //		for (int i=0; i < productNames.size(); i++ ) {
@@ -130,7 +134,7 @@ public class ProductsPage extends GenericPage {
 		return this;
 	}
 	
-	
+	@Step("Open Cart")
 	public CartPage openCart() {
 
 		shoppingCartIcon.click();
@@ -138,16 +142,16 @@ public class ProductsPage extends GenericPage {
 		return new CartPage();
 	}
 
-	public CartPage addThreeProductsToCart() {
-
-		addToCartButton.click();
-		addToCartButton.click();
-		addToCartButton.click();
-
-		shoppingCartIcon.click();
-
-		return new CartPage();
-	}
+//	public CartPage addThreeProductsToCart() {
+//
+//		addToCartButton.click();
+//		addToCartButton.click();
+//		addToCartButton.click();
+//
+//		shoppingCartIcon.click();
+//
+//		return new CartPage();
+//	}
 
 	public LoginPage logout() {
 

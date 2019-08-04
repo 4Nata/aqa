@@ -11,12 +11,17 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.LoginPage;
 
 public class LoginTestNegative_5 extends GenericTest {
 
 //	private WebDriver driver = null;
 
+	
+	@Feature("Login with WRONG CREDENTIALS")
+	@Story("PLH-449")
 	@Test
 
 	public void testUserIsNotAbleToLoginIntoAppWithWrongCredentials() {

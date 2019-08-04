@@ -3,11 +3,16 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.CheckoutComplete;
 import pages.CheckoutStepOne;
 
 public class CheckoutFieldsValidation extends GenericTest {
 
+	
+	@Feature("Checkout Fields Validation")
+	@Story("PLH-442")
 	@Test
 
 	public void validationCheckoutFields() {

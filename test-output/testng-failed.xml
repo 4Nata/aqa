@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.LogOutTest">
+      <class name="tests.RemoveItemsFromCart">
         <methods>
           <include name="closeApp"/>
-          <include name="testUserIsAbleToLogOutFromTheApp"/>
           <include name="attachScreenshot"/>
+          <include name="testUserIsAbleToRemoveProductsFromToCart"/>
         </methods>
-      </class> <!-- tests.LogOutTest -->
+      </class> <!-- tests.RemoveItemsFromCart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

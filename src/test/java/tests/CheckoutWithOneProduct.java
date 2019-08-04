@@ -4,6 +4,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import app.WebApp;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.CartPage;
 import pages.CheckoutComplete;
 import pages.CheckoutStepOne;
@@ -11,6 +13,9 @@ import pages.CheckoutStepTwo;
 
 public class CheckoutWithOneProduct extends GenericTest {
 
+	
+	@Feature("Place an Order")
+	@Story("PLH-443")
 	@Test
 	public void testUserIsAbleToPlaceOrderWithOneProduct() {
 

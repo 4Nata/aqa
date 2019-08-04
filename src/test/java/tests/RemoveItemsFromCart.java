@@ -20,7 +20,7 @@ public class RemoveItemsFromCart extends GenericTest {
 
 		Assert.assertFalse(cartPage.removeButton.isDisplayed(),
 				"The Cart badge should not be displayed when all products are removed");
-		
+//		
 //		Assert.assertNull(cartPage.removeButton);
 	}
 

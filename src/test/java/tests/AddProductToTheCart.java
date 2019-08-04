@@ -1,25 +1,20 @@
 package tests;
 
-import java.io.File;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
 import app.WebApp;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.CartPage;
-import pages.LoginPage;
-import pages.ProductsPage;
 
 public class AddProductToTheCart extends GenericTest {
 
 //	private WebDriver driver = null;
-
+	
+	
+@Feature("Adding Products To The Cart")
+@Story("PLH-441")
 	@Test // annotation which shows TestNG that this is a test described below
 
 	public void testUserIsAbleToAddProductToCart() {

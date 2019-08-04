@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import app.WebApp;
+import io.qameta.allure.Step;
 
 public class CartPage extends GenericPage {
 
@@ -26,6 +27,7 @@ public class CartPage extends GenericPage {
 	@FindBy(xpath = "//button[@class='btn_secondary cart_button' and contains(text(), 'REMOVE')]")
 	public WebElement removeButton;
 
+	@Step("Click [Checkout]")
 	public CheckoutStepOne startCheckout() {
 
 		checkoutButton.click();

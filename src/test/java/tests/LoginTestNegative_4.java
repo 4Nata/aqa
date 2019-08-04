@@ -11,12 +11,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.LoginPage;
 
 public class LoginTestNegative_4 extends GenericTest {
 
 //	private WebDriver driver = null;
 
+	
+
+	@Feature("Login as LOCKED user")
+	@Story("PLH-447")
 	@Test
 	public void testLockedUserIsNotAbleToLogin() {
 

@@ -36,7 +36,7 @@ public class LoginPage  extends GenericPage {
 //		
 
 	
-	@Step("Login as with username {0} and password{1}")
+	@Step("Login as with username [{0}] and password [{1}]")
 	public ProductsPage loginAs(String usermame, String password) {
 
 		testLoginCredentials(usermame, password);
