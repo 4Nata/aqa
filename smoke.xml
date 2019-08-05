@@ -31,10 +31,10 @@
 
 	<test name="Sorting Products">
 		<classes>
-			<class name="tests.SortByNamesAsc">
-				<class name="tests.SortByNamesDesc">
-					<class name="tests.SortByPriceAsc">
-						<class name="tests.SortByPriceDesc">
+			<class name="tests.SortByNamesAsc" />
+				<class name="tests.SortByNamesDesc" />
+					<class name="tests.SortByPriceAsc" />
+						<class name="tests.SortByPriceDesc" />
 		</classes>
 	</test>
 
