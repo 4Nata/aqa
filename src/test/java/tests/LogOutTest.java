@@ -9,7 +9,7 @@ import pages.LoginPage;
 
 public class LogOutTest extends GenericTest {
 
-@Feature("Is user able to LOGOUT from the app")
+@Feature("User is able to LOGOUT from the app")
 @Story("787")
 	@Test // annotation which shows TestNG that this is a test described below
 
@@ -17,7 +17,7 @@ public class LogOutTest extends GenericTest {
 
 	public void testUserIsAbleToLogOutFromTheApp() {
 
-		LoginPage loginPage = openLoginPage().loginAs("standard_user", "secret_sauce").logout();
+		LoginPage loginPage = openLoginPage().loginAs("standard_user", "secret_sauce").header.logout();
 
 		Assert.assertTrue(loginPage.isLoginButtonDisplayed());
 

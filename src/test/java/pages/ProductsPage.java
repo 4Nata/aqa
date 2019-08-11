@@ -5,21 +5,18 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import app.WebApp;
 import io.qameta.allure.Step;
 
 public class ProductsPage extends AbstractBasePage {
 
-	@FindBy(id = "shopping_cart_container")
-	private WebElement shoppingCartIcon;
+//	@FindBy(id = "shopping_cart_container")
+//	private WebElement shoppingCartIcon;
 	@FindBy(css = "div.inventory_item_price")
 	private List<WebElement> productPrices;
 	@FindBy(css = "div.inventory_item_name")
@@ -28,20 +25,26 @@ public class ProductsPage extends AbstractBasePage {
 	private WebElement sortDropdown;
 	@FindBy(xpath = "//button[contains(text(), 'ADD TO CART')]")
 	private WebElement addToCartButton;
-	@FindBy(id = "#shopping_cart_container")
-	private WebElement shoppingCartContainer;
-	@FindBy(css = "div.bm-burger-button button")
-	private WebElement menuButton;
-	@FindBy(xpath = "//a[@id='logout_sidebar_link']")
-	private WebElement logoutButton;
+//	@FindBy(id = "#shopping_cart_container")
+//	private WebElement shoppingCartContainer;
+//	@FindBy(css = "div.bm-burger-button button")
+//	private WebElement menuButton;
+//	@FindBy(xpath = "//a[@id='logout_sidebar_link']")
+//	private WebElement logoutButton;
 
 	public ProductsPage() {
 		super();
 	}
 
+//	
+	public Header header = new Header();
+
 	public boolean isUserLoggedIn() {
 		try {
-			return shoppingCartIcon.isDisplayed();
+
+			header.isMiniCartIconDisplayed();
+
+			return true;
 
 		} catch (NoSuchElementException e) {
 			return false;
@@ -121,14 +124,6 @@ public class ProductsPage extends AbstractBasePage {
 		return this;
 	}
 
-	@Step("Open Cart")
-	public CartPage openCart() {
-
-		shoppingCartIcon.click();
-
-		return new CartPage();
-	}
-
 //	public CartPage addThreeProductsToCart() {
 //
 //		addToCartButton.click();
@@ -139,19 +134,6 @@ public class ProductsPage extends AbstractBasePage {
 //
 //		return new CartPage();
 //	}
-@Step("Click [Logout] button to logout from the app")
-	public LoginPage logout() {
-
-		menuButton.click();
-
-		WebDriverWait waiter = new WebDriverWait(getWebdriver(), 20); // wait 10 seconds
-		waiter.until(ExpectedConditions.elementToBeClickable(logoutButton));
-
-		logoutButton.click();
-
-		return new LoginPage();
-
-	}
 
 }
 

@@ -17,7 +17,7 @@ public class CheckoutWithThreeProducts extends GenericTest {
 
 		CheckoutComplete checkout = openLoginPage().loginAs("standard_user", "secret_sauce")
 				.addProductToCart("Test.allTheThings() T-Shirt (Red)", "Sauce Labs Onesie", "Sauce Labs Bike Light")
-				.openCart().startCheckout().continueCheckout("Natalie", "Lucky", "44444").checkoutComplete();
+				.header.openCart().startCheckout().continueCheckout("Natalie", "Lucky", "44444").checkoutComplete();
 
 		Assert.assertEquals(WebApp.getBrowser().getCurrentUrl(), "https://www.saucedemo.com/checkout-complete.html",
 				"The expected url should be the following "

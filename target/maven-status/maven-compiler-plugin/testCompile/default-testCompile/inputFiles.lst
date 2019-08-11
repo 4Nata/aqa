@@ -13,6 +13,7 @@
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/CheckoutWithThreeProducts.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/CheckoutFieldsValidation.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/LoginTestNegative_1.java
+/Users/natalie/eclipse-workspace/aqa/src/test/java/tests/LogoutFromCheckoutPage.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/LoginTestNegative_5.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/AddProductToTheCart.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/LogOutTest.java

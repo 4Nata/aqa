@@ -1,227 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="15" passed="15" failed="0" skipped="0">
+<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-08-09T22:33:01Z" name="smoke" finished-at="2019-08-09T22:34:20Z" duration-ms="78835">
+  <suite started-at="2019-08-11T10:06:00Z" name="smoke" finished-at="2019-08-11T10:08:35Z" duration-ms="154917">
     <groups>
     </groups>
-    <test started-at="2019-08-09T22:33:01Z" name="Success Login" finished-at="2019-08-09T22:33:08Z" duration-ms="6596">
+    <test started-at="2019-08-11T10:06:00Z" name="Success Login" finished-at="2019-08-11T10:06:13Z" duration-ms="12113">
       <class name="tests.LoginTest">
-        <test-method signature="testUserIsAbleToLoginIntoApp()[pri:0, instance:tests.LoginTest@6b1e7ad3]" started-at="2019-08-09T22:33:01Z" name="testUserIsAbleToLoginIntoApp" finished-at="2019-08-09T22:33:07Z" duration-ms="5740" status="PASS">
+        <test-method signature="testUserIsAbleToLoginIntoApp()[pri:0, instance:tests.LoginTest@749f539e]" started-at="2019-08-11T10:06:01Z" name="testUserIsAbleToLoginIntoApp" finished-at="2019-08-11T10:06:12Z" duration-ms="11257" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsAbleToLoginIntoApp -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTest@6b1e7ad3]" started-at="2019-08-09T22:33:07Z" name="attachScreenshot" finished-at="2019-08-09T22:33:08Z" duration-ms="660" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTest@749f539e]" started-at="2019-08-11T10:06:12Z" name="attachScreenshot" finished-at="2019-08-11T10:06:13Z" duration-ms="671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTest@6b1e7ad3]" started-at="2019-08-09T22:33:08Z" name="closeApp" finished-at="2019-08-09T22:33:08Z" duration-ms="80" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTest@749f539e]" started-at="2019-08-11T10:06:13Z" name="closeApp" finished-at="2019-08-11T10:06:13Z" duration-ms="81" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.LoginTest -->
     </test> <!-- Success Login -->
-    <test started-at="2019-08-09T22:33:08Z" name="Login_Negative scenarios" finished-at="2019-08-09T22:33:23Z" duration-ms="14796">
+    <test started-at="2019-08-11T10:06:13Z" name="Login_Negative scenarios" finished-at="2019-08-11T10:06:31Z" duration-ms="18112">
       <class name="tests.LoginTestNegative_2">
-        <test-method signature="testUserIsNotAbleToLoginWithoutPassword()[pri:0, instance:tests.LoginTestNegative_2@4443ef6f]" started-at="2019-08-09T22:33:11Z" name="testUserIsNotAbleToLoginWithoutPassword" finished-at="2019-08-09T22:33:13Z" duration-ms="2413" status="PASS">
+        <test-method signature="testUserIsNotAbleToLoginWithoutPassword()[pri:0, instance:tests.LoginTestNegative_2@31fc71ab]" started-at="2019-08-11T10:06:17Z" name="testUserIsNotAbleToLoginWithoutPassword" finished-at="2019-08-11T10:06:19Z" duration-ms="2676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsNotAbleToLoginWithoutPassword -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_2@4443ef6f]" started-at="2019-08-09T22:33:13Z" name="attachScreenshot" finished-at="2019-08-09T22:33:14Z" duration-ms="432" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_2@31fc71ab]" started-at="2019-08-11T10:06:19Z" name="attachScreenshot" finished-at="2019-08-11T10:06:20Z" duration-ms="458" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_2@4443ef6f]" started-at="2019-08-09T22:33:14Z" name="closeApp" finished-at="2019-08-09T22:33:14Z" duration-ms="85" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_2@31fc71ab]" started-at="2019-08-11T10:06:20Z" name="closeApp" finished-at="2019-08-11T10:06:20Z" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.LoginTestNegative_2 -->
       <class name="tests.LoginTestNegative_3">
-        <test-method signature="testUserIsNotAbleToLoginWithoutUsername()[pri:0, instance:tests.LoginTestNegative_3@7e46d648]" started-at="2019-08-09T22:33:14Z" name="testUserIsNotAbleToLoginWithoutUsername" finished-at="2019-08-09T22:33:16Z" duration-ms="2411" status="PASS">
+        <test-method signature="testUserIsNotAbleToLoginWithoutUsername()[pri:0, instance:tests.LoginTestNegative_3@71391b3f]" started-at="2019-08-11T10:06:20Z" name="testUserIsNotAbleToLoginWithoutUsername" finished-at="2019-08-11T10:06:23Z" duration-ms="2791" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsNotAbleToLoginWithoutUsername -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_3@7e46d648]" started-at="2019-08-09T22:33:16Z" name="attachScreenshot" finished-at="2019-08-09T22:33:16Z" duration-ms="440" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_3@71391b3f]" started-at="2019-08-11T10:06:23Z" name="attachScreenshot" finished-at="2019-08-11T10:06:23Z" duration-ms="449" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_3@7e46d648]" started-at="2019-08-09T22:33:16Z" name="closeApp" finished-at="2019-08-09T22:33:17Z" duration-ms="81" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_3@71391b3f]" started-at="2019-08-11T10:06:23Z" name="closeApp" finished-at="2019-08-11T10:06:23Z" duration-ms="83" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.LoginTestNegative_3 -->
       <class name="tests.LoginTestNegative_1">
-        <test-method signature="testUserIsNotAbleToLoginWithoutUsernameAndPassword()[pri:0, instance:tests.LoginTestNegative_1@3af356f]" started-at="2019-08-09T22:33:08Z" name="testUserIsNotAbleToLoginWithoutUsernameAndPassword" finished-at="2019-08-09T22:33:10Z" duration-ms="2384" status="PASS">
+        <test-method signature="testUserIsNotAbleToLoginWithoutUsernameAndPassword()[pri:0, instance:tests.LoginTestNegative_1@6fca2a8f]" started-at="2019-08-11T10:06:13Z" name="testUserIsNotAbleToLoginWithoutUsernameAndPassword" finished-at="2019-08-11T10:06:16Z" duration-ms="3487" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsNotAbleToLoginWithoutUsernameAndPassword -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_1@3af356f]" started-at="2019-08-09T22:33:10Z" name="attachScreenshot" finished-at="2019-08-09T22:33:11Z" duration-ms="436" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_1@6fca2a8f]" started-at="2019-08-11T10:06:16Z" name="attachScreenshot" finished-at="2019-08-11T10:06:17Z" duration-ms="446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_1@3af356f]" started-at="2019-08-09T22:33:11Z" name="closeApp" finished-at="2019-08-09T22:33:11Z" duration-ms="81" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_1@6fca2a8f]" started-at="2019-08-11T10:06:17Z" name="closeApp" finished-at="2019-08-11T10:06:17Z" duration-ms="83" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.LoginTestNegative_1 -->
       <class name="tests.LoginTestNegative_4">
-        <test-method signature="testLockedUserIsNotAbleToLogin()[pri:0, instance:tests.LoginTestNegative_4@51751e5f]" started-at="2019-08-09T22:33:17Z" name="testLockedUserIsNotAbleToLogin" finished-at="2019-08-09T22:33:19Z" duration-ms="2475" status="PASS">
+        <test-method signature="testLockedUserIsNotAbleToLogin()[pri:0, instance:tests.LoginTestNegative_4@2cfbeac4]" started-at="2019-08-11T10:06:23Z" name="testLockedUserIsNotAbleToLogin" finished-at="2019-08-11T10:06:27Z" duration-ms="3617" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLockedUserIsNotAbleToLogin -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_4@51751e5f]" started-at="2019-08-09T22:33:19Z" name="attachScreenshot" finished-at="2019-08-09T22:33:19Z" duration-ms="433" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_4@2cfbeac4]" started-at="2019-08-11T10:06:27Z" name="attachScreenshot" finished-at="2019-08-11T10:06:27Z" duration-ms="446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_4@51751e5f]" started-at="2019-08-09T22:33:19Z" name="closeApp" finished-at="2019-08-09T22:33:20Z" duration-ms="85" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_4@2cfbeac4]" started-at="2019-08-11T10:06:27Z" name="closeApp" finished-at="2019-08-11T10:06:27Z" duration-ms="81" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.LoginTestNegative_4 -->
       <class name="tests.LoginTestNegative_5">
-        <test-method signature="testUserIsNotAbleToLoginIntoAppWithWrongCredentials()[pri:0, instance:tests.LoginTestNegative_5@2b0b4d53]" started-at="2019-08-09T22:33:20Z" name="testUserIsNotAbleToLoginIntoAppWithWrongCredentials" finished-at="2019-08-09T22:33:22Z" duration-ms="2484" status="PASS">
+        <test-method signature="testUserIsNotAbleToLoginIntoAppWithWrongCredentials()[pri:0, instance:tests.LoginTestNegative_5@12db3386]" started-at="2019-08-11T10:06:27Z" name="testUserIsNotAbleToLoginIntoAppWithWrongCredentials" finished-at="2019-08-11T10:06:30Z" duration-ms="2821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsNotAbleToLoginIntoAppWithWrongCredentials -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_5@2b0b4d53]" started-at="2019-08-09T22:33:22Z" name="attachScreenshot" finished-at="2019-08-09T22:33:22Z" duration-ms="432" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LoginTestNegative_5@12db3386]" started-at="2019-08-11T10:06:30Z" name="attachScreenshot" finished-at="2019-08-11T10:06:31Z" duration-ms="454" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_5@2b0b4d53]" started-at="2019-08-09T22:33:22Z" name="closeApp" finished-at="2019-08-09T22:33:23Z" duration-ms="81" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LoginTestNegative_5@12db3386]" started-at="2019-08-11T10:06:31Z" name="closeApp" finished-at="2019-08-11T10:06:31Z" duration-ms="87" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.LoginTestNegative_5 -->
     </test> <!-- Login_Negative scenarios -->
-    <test started-at="2019-08-09T22:33:23Z" name="Logout" finished-at="2019-08-09T22:33:29Z" duration-ms="6093">
+    <test started-at="2019-08-11T10:06:31Z" name="Logout" finished-at="2019-08-11T10:06:43Z" duration-ms="12125">
       <class name="tests.LogOutTest">
-        <test-method signature="testUserIsAbleToLogOutFromTheApp()[pri:0, instance:tests.LogOutTest@6fca2a8f]" started-at="2019-08-09T22:33:23Z" name="testUserIsAbleToLogOutFromTheApp" finished-at="2019-08-09T22:33:28Z" duration-ms="5556" status="PASS">
+        <test-method signature="testUserIsAbleToLogOutFromTheApp()[pri:0, instance:tests.LogOutTest@198ef2ce]" started-at="2019-08-11T10:06:31Z" name="testUserIsAbleToLogOutFromTheApp" finished-at="2019-08-11T10:06:42Z" duration-ms="11596" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsAbleToLogOutFromTheApp -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LogOutTest@6fca2a8f]" started-at="2019-08-09T22:33:28Z" name="attachScreenshot" finished-at="2019-08-09T22:33:29Z" duration-ms="449" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LogOutTest@198ef2ce]" started-at="2019-08-11T10:06:42Z" name="attachScreenshot" finished-at="2019-08-11T10:06:43Z" duration-ms="442" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LogOutTest@6fca2a8f]" started-at="2019-08-09T22:33:29Z" name="closeApp" finished-at="2019-08-09T22:33:29Z" duration-ms="87" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LogOutTest@198ef2ce]" started-at="2019-08-11T10:06:43Z" name="closeApp" finished-at="2019-08-11T10:06:43Z" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.LogOutTest -->
     </test> <!-- Logout -->
-    <test started-at="2019-08-09T22:33:29Z" name="Adding products to the Cart" finished-at="2019-08-09T22:33:34Z" duration-ms="5729">
+    <test started-at="2019-08-11T10:06:43Z" name="Adding products to the Cart" finished-at="2019-08-11T10:06:49Z" duration-ms="6578">
       <class name="tests.AddProductToTheCart">
-        <test-method signature="testUserIsAbleToAddProductToCart()[pri:0, instance:tests.AddProductToTheCart@61a91912]" started-at="2019-08-09T22:33:29Z" name="testUserIsAbleToAddProductToCart" finished-at="2019-08-09T22:33:34Z" duration-ms="5183" status="PASS">
+        <test-method signature="testUserIsAbleToAddProductToCart()[pri:0, instance:tests.AddProductToTheCart@6f8e0cee]" started-at="2019-08-11T10:06:43Z" name="testUserIsAbleToAddProductToCart" finished-at="2019-08-11T10:06:49Z" duration-ms="6037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsAbleToAddProductToCart -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.AddProductToTheCart@61a91912]" started-at="2019-08-09T22:33:34Z" name="attachScreenshot" finished-at="2019-08-09T22:33:34Z" duration-ms="454" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.AddProductToTheCart@6f8e0cee]" started-at="2019-08-11T10:06:49Z" name="attachScreenshot" finished-at="2019-08-11T10:06:49Z" duration-ms="455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.AddProductToTheCart@61a91912]" started-at="2019-08-09T22:33:34Z" name="closeApp" finished-at="2019-08-09T22:33:34Z" duration-ms="90" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.AddProductToTheCart@6f8e0cee]" started-at="2019-08-11T10:06:49Z" name="closeApp" finished-at="2019-08-11T10:06:49Z" duration-ms="83" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.AddProductToTheCart -->
     </test> <!-- Adding products to the Cart -->
-    <test started-at="2019-08-09T22:33:34Z" name="Checkout" finished-at="2019-08-09T22:33:57Z" duration-ms="22150">
-      <class name="tests.CheckoutFieldsValidation">
-        <test-method signature="validationCheckoutFields()[pri:0, instance:tests.CheckoutFieldsValidation@5116ac09]" started-at="2019-08-09T22:33:48Z" name="validationCheckoutFields" finished-at="2019-08-09T22:33:56Z" duration-ms="8126" status="PASS">
+    <test started-at="2019-08-11T10:06:49Z" name="Removing products from Cart" finished-at="2019-08-11T10:07:23Z" duration-ms="33458">
+      <class name="tests.RemoveItemsFromCart">
+        <test-method signature="testUserIsAbleToRemoveProductsFromToCart()[pri:0, instance:tests.RemoveItemsFromCart@7dd00705]" started-at="2019-08-11T10:06:49Z" name="testUserIsAbleToRemoveProductsFromToCart" finished-at="2019-08-11T10:07:18Z" duration-ms="28232" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validationCheckoutFields -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.CheckoutFieldsValidation@5116ac09]" started-at="2019-08-09T22:33:56Z" name="attachScreenshot" finished-at="2019-08-09T22:33:56Z" duration-ms="479" status="PASS">
+        </test-method> <!-- testUserIsAbleToRemoveProductsFromToCart -->
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.RemoveItemsFromCart@7dd00705]" started-at="2019-08-11T10:07:18Z" name="attachScreenshot" finished-at="2019-08-11T10:07:23Z" duration-ms="5135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.CheckoutFieldsValidation@5116ac09]" started-at="2019-08-09T22:33:56Z" name="closeApp" finished-at="2019-08-09T22:33:57Z" duration-ms="85" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.RemoveItemsFromCart@7dd00705]" started-at="2019-08-11T10:07:23Z" name="closeApp" finished-at="2019-08-11T10:07:23Z" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- tests.RemoveItemsFromCart -->
+    </test> <!-- Removing products from Cart -->
+    <test started-at="2019-08-11T10:07:23Z" name="Checkout" finished-at="2019-08-11T10:07:52Z" duration-ms="29369">
+      <class name="tests.CheckoutFieldsValidation">
+        <test-method signature="validationCheckoutFields()[pri:0, instance:tests.CheckoutFieldsValidation@6d3c232f]" started-at="2019-08-11T10:07:42Z" name="validationCheckoutFields" finished-at="2019-08-11T10:07:52Z" duration-ms="9836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validationCheckoutFields -->
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.CheckoutFieldsValidation@6d3c232f]" started-at="2019-08-11T10:07:52Z" name="attachScreenshot" finished-at="2019-08-11T10:07:52Z" duration-ms="470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- attachScreenshot -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.CheckoutFieldsValidation@6d3c232f]" started-at="2019-08-11T10:07:52Z" name="closeApp" finished-at="2019-08-11T10:07:52Z" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.CheckoutFieldsValidation -->
       <class name="tests.CheckoutWithOneProduct">
-        <test-method signature="testUserIsAbleToPlaceOrderWithOneProduct()[pri:0, instance:tests.CheckoutWithOneProduct@6f8e0cee]" started-at="2019-08-09T22:33:34Z" name="testUserIsAbleToPlaceOrderWithOneProduct" finished-at="2019-08-09T22:33:41Z" duration-ms="6215" status="PASS">
+        <test-method signature="testUserIsAbleToPlaceOrderWithOneProduct()[pri:0, instance:tests.CheckoutWithOneProduct@dffa30b]" started-at="2019-08-11T10:07:23Z" name="testUserIsAbleToPlaceOrderWithOneProduct" finished-at="2019-08-11T10:07:33Z" duration-ms="10446" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsAbleToPlaceOrderWithOneProduct -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.CheckoutWithOneProduct@6f8e0cee]" started-at="2019-08-09T22:33:41Z" name="attachScreenshot" finished-at="2019-08-09T22:33:41Z" duration-ms="512" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.CheckoutWithOneProduct@dffa30b]" started-at="2019-08-11T10:07:33Z" name="attachScreenshot" finished-at="2019-08-11T10:07:34Z" duration-ms="466" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.CheckoutWithOneProduct@6f8e0cee]" started-at="2019-08-09T22:33:41Z" name="closeApp" finished-at="2019-08-09T22:33:41Z" duration-ms="84" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.CheckoutWithOneProduct@dffa30b]" started-at="2019-08-11T10:07:34Z" name="closeApp" finished-at="2019-08-11T10:07:34Z" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.CheckoutWithOneProduct -->
       <class name="tests.CheckoutWithThreeProducts">
-        <test-method signature="testUserIsAbleToPlaceOrderWithThreeProducts()[pri:0, instance:tests.CheckoutWithThreeProducts@614aeccc]" started-at="2019-08-09T22:33:41Z" name="testUserIsAbleToPlaceOrderWithThreeProducts" finished-at="2019-08-09T22:33:47Z" duration-ms="6054" status="PASS">
+        <test-method signature="testUserIsAbleToPlaceOrderWithThreeProducts()[pri:0, instance:tests.CheckoutWithThreeProducts@4d8126f]" started-at="2019-08-11T10:07:34Z" name="testUserIsAbleToPlaceOrderWithThreeProducts" finished-at="2019-08-11T10:07:41Z" duration-ms="7407" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUserIsAbleToPlaceOrderWithThreeProducts -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.CheckoutWithThreeProducts@614aeccc]" started-at="2019-08-09T22:33:47Z" name="attachScreenshot" finished-at="2019-08-09T22:33:48Z" duration-ms="490" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.CheckoutWithThreeProducts@4d8126f]" started-at="2019-08-11T10:07:41Z" name="attachScreenshot" finished-at="2019-08-11T10:07:42Z" duration-ms="469" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.CheckoutWithThreeProducts@614aeccc]" started-at="2019-08-09T22:33:48Z" name="closeApp" finished-at="2019-08-09T22:33:48Z" duration-ms="94" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.CheckoutWithThreeProducts@4d8126f]" started-at="2019-08-11T10:07:42Z" name="closeApp" finished-at="2019-08-11T10:07:42Z" duration-ms="89" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.CheckoutWithThreeProducts -->
     </test> <!-- Checkout -->
-    <test started-at="2019-08-09T22:33:57Z" name="Sorting Products" finished-at="2019-08-09T22:34:20Z" duration-ms="23404">
-      <class name="tests.SortByNamesDesc">
-        <test-method signature="testProductsAreSortedByAsc()[pri:0, instance:tests.SortByNamesDesc@6d4a65c6]" started-at="2019-08-09T22:34:03Z" name="testProductsAreSortedByAsc" finished-at="2019-08-09T22:34:08Z" duration-ms="5086" status="PASS">
+    <test started-at="2019-08-11T10:07:52Z" name="User is able to logout from Checkout page" finished-at="2019-08-11T10:08:00Z" duration-ms="7860">
+      <class name="tests.LogoutFromCheckoutPage">
+        <test-method signature="testUserIsAbleToLogOutFromCheckoutPage()[pri:0, instance:tests.LogoutFromCheckoutPage@5cf87cfd]" started-at="2019-08-11T10:07:52Z" name="testUserIsAbleToLogOutFromCheckoutPage" finished-at="2019-08-11T10:08:00Z" duration-ms="7331" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testProductsAreSortedByAsc -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.SortByNamesDesc@6d4a65c6]" started-at="2019-08-09T22:34:08Z" name="attachScreenshot" finished-at="2019-08-09T22:34:08Z" duration-ms="656" status="PASS">
+        </test-method> <!-- testUserIsAbleToLogOutFromCheckoutPage -->
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.LogoutFromCheckoutPage@5cf87cfd]" started-at="2019-08-11T10:08:00Z" name="attachScreenshot" finished-at="2019-08-11T10:08:00Z" duration-ms="431" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.SortByNamesDesc@6d4a65c6]" started-at="2019-08-09T22:34:08Z" name="closeApp" finished-at="2019-08-09T22:34:09Z" duration-ms="84" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.LogoutFromCheckoutPage@5cf87cfd]" started-at="2019-08-11T10:08:00Z" name="closeApp" finished-at="2019-08-11T10:08:00Z" duration-ms="97" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- tests.LogoutFromCheckoutPage -->
+    </test> <!-- User is able to logout from Checkout page -->
+    <test started-at="2019-08-11T10:08:00Z" name="Sorting Products" finished-at="2019-08-11T10:08:35Z" duration-ms="35222">
+      <class name="tests.SortByNamesDesc">
+        <test-method signature="testProductsAreSortedByAsc()[pri:0, instance:tests.SortByNamesDesc@6c37bd27]" started-at="2019-08-11T10:08:10Z" name="testProductsAreSortedByAsc" finished-at="2019-08-11T10:08:23Z" duration-ms="12774" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductsAreSortedByAsc -->
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.SortByNamesDesc@6c37bd27]" started-at="2019-08-11T10:08:23Z" name="attachScreenshot" finished-at="2019-08-11T10:08:23Z" duration-ms="623" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- attachScreenshot -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.SortByNamesDesc@6c37bd27]" started-at="2019-08-11T10:08:23Z" name="closeApp" finished-at="2019-08-11T10:08:23Z" duration-ms="81" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.SortByNamesDesc -->
       <class name="tests.SortByPriceDesc">
-        <test-method signature="testSortByPriceAsc()[pri:0, instance:tests.SortByPriceDesc@4c98a6d5]" started-at="2019-08-09T22:34:14Z" name="testSortByPriceAsc" finished-at="2019-08-09T22:34:19Z" duration-ms="4935" status="PASS">
+        <test-method signature="testSortByPriceAsc()[pri:0, instance:tests.SortByPriceDesc@30331109]" started-at="2019-08-11T10:08:29Z" name="testSortByPriceAsc" finished-at="2019-08-11T10:08:35Z" duration-ms="5547" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSortByPriceAsc -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.SortByPriceDesc@4c98a6d5]" started-at="2019-08-09T22:34:19Z" name="attachScreenshot" finished-at="2019-08-09T22:34:20Z" duration-ms="637" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.SortByPriceDesc@30331109]" started-at="2019-08-11T10:08:35Z" name="attachScreenshot" finished-at="2019-08-11T10:08:35Z" duration-ms="621" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.SortByPriceDesc@4c98a6d5]" started-at="2019-08-09T22:34:20Z" name="closeApp" finished-at="2019-08-09T22:34:20Z" duration-ms="87" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.SortByPriceDesc@30331109]" started-at="2019-08-11T10:08:35Z" name="closeApp" finished-at="2019-08-11T10:08:35Z" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.SortByPriceDesc -->
       <class name="tests.SortByNamesAsc">
-        <test-method signature="testProductsAreSortedByAsc()[pri:0, instance:tests.SortByNamesAsc@5965844d]" started-at="2019-08-09T22:33:57Z" name="testProductsAreSortedByAsc" finished-at="2019-08-09T22:34:02Z" duration-ms="5438" status="PASS">
+        <test-method signature="testProductsAreSortedByAsc()[pri:0, instance:tests.SortByNamesAsc@7a24eb3]" started-at="2019-08-11T10:08:00Z" name="testProductsAreSortedByAsc" finished-at="2019-08-11T10:08:09Z" duration-ms="8942" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testProductsAreSortedByAsc -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.SortByNamesAsc@5965844d]" started-at="2019-08-09T22:34:02Z" name="attachScreenshot" finished-at="2019-08-09T22:34:03Z" duration-ms="600" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.SortByNamesAsc@7a24eb3]" started-at="2019-08-11T10:08:09Z" name="attachScreenshot" finished-at="2019-08-11T10:08:10Z" duration-ms="622" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.SortByNamesAsc@5965844d]" started-at="2019-08-09T22:34:03Z" name="closeApp" finished-at="2019-08-09T22:34:03Z" duration-ms="82" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.SortByNamesAsc@7a24eb3]" started-at="2019-08-11T10:08:10Z" name="closeApp" finished-at="2019-08-11T10:08:10Z" duration-ms="82" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- tests.SortByNamesAsc -->
       <class name="tests.SortByPriceAsc">
-        <test-method signature="testSortByPriceAsc()[pri:0, instance:tests.SortByPriceAsc@aa004a0]" started-at="2019-08-09T22:34:09Z" name="testSortByPriceAsc" finished-at="2019-08-09T22:34:14Z" duration-ms="5074" status="PASS">
+        <test-method signature="testSortByPriceAsc()[pri:0, instance:tests.SortByPriceAsc@25d3cfc8]" started-at="2019-08-11T10:08:23Z" name="testSortByPriceAsc" finished-at="2019-08-11T10:08:28Z" duration-ms="5061" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSortByPriceAsc -->
-        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.SortByPriceAsc@aa004a0]" started-at="2019-08-09T22:34:14Z" name="attachScreenshot" finished-at="2019-08-09T22:34:14Z" duration-ms="629" status="PASS">
+        <test-method is-config="true" signature="attachScreenshot()[pri:0, instance:tests.SortByPriceAsc@25d3cfc8]" started-at="2019-08-11T10:08:28Z" name="attachScreenshot" finished-at="2019-08-11T10:08:29Z" duration-ms="656" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- attachScreenshot -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.SortByPriceAsc@aa004a0]" started-at="2019-08-09T22:34:14Z" name="closeApp" finished-at="2019-08-09T22:34:14Z" duration-ms="89" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:tests.SortByPriceAsc@25d3cfc8]" started-at="2019-08-11T10:08:29Z" name="closeApp" finished-at="2019-08-11T10:08:29Z" duration-ms="87" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->

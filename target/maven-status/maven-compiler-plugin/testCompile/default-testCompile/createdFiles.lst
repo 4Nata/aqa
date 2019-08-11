@@ -24,6 +24,7 @@ tests/SortByPriceAsc.class
 tests/GenericTest.class
 pages/ProductsPage.class
 pages/CheckoutComplete.class
+tests/LogoutFromCheckoutPage.class
 Tools/BrowserFactory.class
 Tools/WebElementUtils.class
 tests/CheckoutFieldsValidation.class

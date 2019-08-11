@@ -28,6 +28,8 @@ public class CheckoutStepOne extends AbstractBasePage {
 	@FindBy(xpath = "//h3[@data-test='error']")
 	private WebElement errorMessage;
 
+	public Header header = new Header();
+	
 	public CheckoutStepOne() {
 		super();
 	}
