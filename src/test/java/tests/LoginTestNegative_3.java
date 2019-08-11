@@ -46,10 +46,10 @@ public class LoginTestNegative_3 extends GenericTest {
 
 		
 
-		LoginPage loginWithoutUsername = openLoginPage().testLoginCredentials("" , "secret_sauce");
+		LoginPage loginPage = openLoginPage().testLoginCredentials("" , "secret_sauce");
 
-		Assert.assertTrue(loginWithoutUsername.errorMessageWithoutLoginAndPassword.isDisplayed());
-		Assert.assertEquals(loginWithoutUsername.errorMessageWithoutLoginAndPassword.getText(),
+		Assert.assertTrue(loginPage.isErrorMessageDisplayed());
+		Assert.assertEquals(loginPage.getErrorMessage(),
 				"Epic sadface: Username is required");
 
 	}

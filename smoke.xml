@@ -1,10 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="smoke" parallel="tests" thread-count="2">
+<suite name="smoke" parallel="tests" thread-count="1">
 	<test name="Success Login">
 		<classes>
 			<class name="tests.LoginTest" />
 		</classes>
 	</test>
+	
 	<test name="Login_Negative scenarios">
 		<classes>
 			<class name="tests.LoginTestNegative_1" />
@@ -15,6 +16,13 @@
 		</classes>
 
 	</test>
+	
+	<test name="Logout">
+	<classes>
+	<class name="tests.LogOutTest" />
+	</classes>
+	</test>
+	
 	<test name="Adding products to the Cart">
 		<classes>
 			<class name="tests.AddProductToTheCart" />

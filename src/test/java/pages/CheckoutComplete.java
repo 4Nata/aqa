@@ -5,13 +5,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import app.WebApp;
 
-public class CheckoutComplete extends GenericPage  {
-
-	private WebDriver pageDriver;
+public class CheckoutComplete extends AbstractBasePage {
 
 	public CheckoutComplete() {
-		this.pageDriver = WebApp.getBrowser();
-		PageFactory.initElements(pageDriver, this);
+		super();
 	}
 
 }

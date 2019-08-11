@@ -35,7 +35,7 @@ public class BrowserFactory {
 			return driver;
 		} else {
 
-			this.driver = getBrowser();
+			this.driver = createDriver();
 
 			return driver;
 
@@ -53,7 +53,7 @@ public class BrowserFactory {
 		}
 	}
 
-	public WebDriver getBrowser() {
+	public WebDriver createDriver() {
 
 		String browserType = getBrowserType().toLowerCase();
 

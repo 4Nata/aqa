@@ -14,11 +14,11 @@ public class RemoveItemsFromCart extends GenericTest {
 				.addProductToCart("Sauce Labs Onesie", "Test.allTheThings() T-Shirt (Red)").openCart()
 				.removeProductFromCart("Sauce Labs Onesie");
 
-		Assert.assertTrue(cartPage.cartBadge.isDisplayed());
+		Assert.assertTrue(cartPage.cartBadgeisDisplayed());
 
 		cartPage.removeProductFromCart("Test.allTheThings() T-Shirt (Red)");
 
-		Assert.assertFalse(cartPage.removeButton.isDisplayed(),
+		Assert.assertFalse(cartPage.isRemoveButtonDisplayed(),
 				"The Cart badge should not be displayed when all products are removed");
 //		
 //		Assert.assertNull(cartPage.removeButton);

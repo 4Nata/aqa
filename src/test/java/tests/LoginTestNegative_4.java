@@ -46,10 +46,10 @@ public class LoginTestNegative_4 extends GenericTest {
 
 		
 
-		LoginPage loginWithLockedUser = openLoginPage().testLoginCredentials("locked_out_user", "secret_sauce");
+		LoginPage loginPage = openLoginPage().testLoginCredentials("locked_out_user", "secret_sauce");
 
-		Assert.assertTrue(loginWithLockedUser.errorMessageWithoutLoginAndPassword.isDisplayed());
-		Assert.assertEquals(loginWithLockedUser.errorMessageWithoutLoginAndPassword.getText(),
+		Assert.assertTrue(loginPage.isErrorMessageDisplayed());
+		Assert.assertEquals(loginPage.getErrorMessage(),
 				"Epic sadface: Sorry, this user has been locked out.");
 	}
 

@@ -16,17 +16,28 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import app.WebApp;
 import io.qameta.allure.Step;
 
-public class ProductsPage extends GenericPage {
-
-	private WebDriver pageDriver;
-
-	public ProductsPage() {
-		this.pageDriver = WebApp.getBrowser();
-		PageFactory.initElements(pageDriver, this);
-	}
+public class ProductsPage extends AbstractBasePage {
 
 	@FindBy(id = "shopping_cart_container")
 	private WebElement shoppingCartIcon;
+	@FindBy(css = "div.inventory_item_price")
+	private List<WebElement> productPrices;
+	@FindBy(css = "div.inventory_item_name")
+	private List<WebElement> productNames;
+	@FindBy(css = ".product_sort_container")
+	private WebElement sortDropdown;
+	@FindBy(xpath = "//button[contains(text(), 'ADD TO CART')]")
+	private WebElement addToCartButton;
+	@FindBy(id = "#shopping_cart_container")
+	private WebElement shoppingCartContainer;
+	@FindBy(css = "div.bm-burger-button button")
+	private WebElement menuButton;
+	@FindBy(xpath = "//a[@id='logout_sidebar_link']")
+	private WebElement logoutButton;
+
+	public ProductsPage() {
+		super();
+	}
 
 	public boolean isUserLoggedIn() {
 		try {
@@ -38,12 +49,6 @@ public class ProductsPage extends GenericPage {
 
 	}
 
-	@FindBy(css = "div.inventory_item_price")
-	private List<WebElement> productPrices;
-
-	@FindBy(css = "div.inventory_item_name")
-	private List<WebElement> productNames;
-
 	public List<String> getProductsNames() {
 		List<String> names = new ArrayList<>();
 		for (int i = 0; i < productNames.size(); i++) {
@@ -54,23 +59,20 @@ public class ProductsPage extends GenericPage {
 		return names;
 
 	}
-	
+
 	@Step("Sort Products By Names Asc")
 	public ProductsPage sortByNamesAsc() {
 		Select select = new Select(sortDropdown);
 		select.selectByValue("az");
 		return this;
 	}
-	
+
 	@Step("Sort Products By Names Desc")
 	public ProductsPage sortByNamesDesc() {
 		Select select = new Select(sortDropdown);
 		select.selectByValue("za");
 		return this;
 	}
-	
-	
-	
 
 	public List<Double> getProductsPrices() {
 		List<Double> prices = new ArrayList<>();
@@ -84,17 +86,13 @@ public class ProductsPage extends GenericPage {
 
 	}
 
-	@FindBy(css = ".product_sort_container")
-	private WebElement sortDropdown;
-
-	
 	@Step("Sort Products By Prices Asc")
 	public ProductsPage sortByPriceAsc() {
 		Select select = new Select(sortDropdown);
 		select.selectByValue("lohi");
 		return this;
 	}
-	
+
 	@Step("Sort Products By Prices Desc")
 	public ProductsPage sortByPriceDesc() {
 		Select select = new Select(sortDropdown);
@@ -102,20 +100,8 @@ public class ProductsPage extends GenericPage {
 		return this;
 	}
 
-	@FindBy(xpath = "//button[contains(text(), 'ADD TO CART')]")
-	private WebElement addToCartButton;
-
-	@FindBy(id = "#shopping_cart_container")
-	private WebElement shoppingCartContainer;
-
-	@FindBy(css = "div.bm-burger-button button")
-	private WebElement menuButton;
-
-	@FindBy(xpath = "//a[@id='logout_sidebar_link']")
-	private WebElement logoutButton;
-
 	// (List<String> productNames)
-	
+
 	@Step("Add Product To The Cart")
 	public ProductsPage addProductToCart(String... productNames) {
 
@@ -126,14 +112,15 @@ public class ProductsPage extends GenericPage {
 
 		for (int i = 0; i < productNames.length; i++) {
 
-			pageDriver.findElement(By.xpath("//div[@class='inventory_item']//div[contains(text(), '" + productNames[i]
+			getWebdriver().findElement(By.xpath("//div[@class='inventory_item']//div[contains(text(), '"
+					+ productNames[i]
 					+ "')]//ancestor::div[@class='inventory_item']//button[@class='btn_primary btn_inventory']"))
 					.click();
 
 		}
 		return this;
 	}
-	
+
 	@Step("Open Cart")
 	public CartPage openCart() {
 
@@ -152,14 +139,13 @@ public class ProductsPage extends GenericPage {
 //
 //		return new CartPage();
 //	}
-
+@Step("Click [Logout] button to logout from the app")
 	public LoginPage logout() {
 
 		menuButton.click();
 
-		WebDriverWait waiter = new WebDriverWait(pageDriver, 20); // wait 10 seconds
-		waiter.until(ExpectedConditions
-				.elementToBeClickable(logoutButton));
+		WebDriverWait waiter = new WebDriverWait(getWebdriver(), 20); // wait 10 seconds
+		waiter.until(ExpectedConditions.elementToBeClickable(logoutButton));
 
 		logoutButton.click();
 

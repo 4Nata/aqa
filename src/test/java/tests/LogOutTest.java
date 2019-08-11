@@ -1,36 +1,25 @@
 package tests;
 
-import java.io.File;
-import java.util.concurrent.TimeUnit;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.LoginPage;
 
 public class LogOutTest extends GenericTest {
 
-
-
+@Feature("Is user able to LOGOUT from the app")
+@Story("787")
 	@Test // annotation which shows TestNG that this is a test described below
 
 	// throws InterruptedException
 
 	public void testUserIsAbleToLogOutFromTheApp() {
 
-		LoginPage logout = openLoginPage().loginAs("standard_user", "secret_sauce").logout();
+		LoginPage loginPage = openLoginPage().loginAs("standard_user", "secret_sauce").logout();
 
-		Assert.assertTrue(logout.loginButton.isDisplayed());
+		Assert.assertTrue(loginPage.isLoginButtonDisplayed());
 
 	}
 

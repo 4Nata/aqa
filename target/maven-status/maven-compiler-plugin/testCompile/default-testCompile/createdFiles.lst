@@ -1,11 +1,12 @@
+pages/Header.class
 tests/LogOutTest.class
 tests/CheckoutWithOneProduct.class
 tests/LoginTestNegative_2.class
 tests/AnnotationTest.class
-pages/GenericPage.class
 tests/LoginTestNegative_4.class
 pages/CheckoutStepTwo.class
 tests/AddProductToTheCart.class
+pages/AbstractBasePage.class
 app/WebApp$1.class
 tests/LoginTest.class
 app/WebApp.class

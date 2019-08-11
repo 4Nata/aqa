@@ -9,23 +9,18 @@ import org.openqa.selenium.support.PageFactory;
 import app.WebApp;
 import io.qameta.allure.Step;
 
-public class CartPage extends GenericPage {
-
-	private WebDriver pageDriver;
-
-	public CartPage() {
-		this.pageDriver = WebApp.getBrowser();
-		PageFactory.initElements(pageDriver, this);
-	}
+public class CartPage extends AbstractBasePage {
 
 	@FindBy(xpath = "//span[@class='fa-layers-counter shopping_cart_badge' and contains(text(), '1')]")
-	public WebElement cartBadge;
-
+	private WebElement cartBadge;
 	@FindBy(xpath = "//a[@class='btn_action checkout_button']")
 	private WebElement checkoutButton;
-	
 	@FindBy(xpath = "//button[@class='btn_secondary cart_button' and contains(text(), 'REMOVE')]")
-	public WebElement removeButton;
+	private WebElement removeButton;
+
+	public CartPage() {
+		super();
+	}
 
 	@Step("Click [Checkout]")
 	public CheckoutStepOne startCheckout() {
@@ -35,21 +30,36 @@ public class CartPage extends GenericPage {
 		return new CheckoutStepOne();
 
 	}
+	
+	public boolean cartBadgeisDisplayed() {
+		
+		cartBadge.isDisplayed();
+		return true;
+	}
 
 	public CartPage removeProductFromCart(String... productNames) {
 
 		for (int i = 0; i < productNames.length; i++) {
 
-			pageDriver.findElement(By.xpath("//div[@class='cart_item_label']//div[contains(text(), '" + productNames[i]
+			getWebdriver().findElement(By.xpath("//div[@class='cart_item_label']//div[contains(text(), '"
+					+ productNames[i]
 					+ "')]//ancestor::div[@class='cart_item_label']/descendant::button[@class='btn_secondary cart_button']"))
 					.click();
 
 		}
+		
+		
 
 //		//div[@class='cart_item_label']//div[contains(text(), '" + productNames[i]
 //		+ "')]//ancestor::div[@class='cart_item_label']/descendant::button[@class='btn_secondary cart_button']
 //		
 		return this;
+	}
+	
+	public boolean isRemoveButtonDisplayed() {
+		
+		removeButton.isDisplayed();
+		return true;
 	}
 
 }

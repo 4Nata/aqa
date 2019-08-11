@@ -8,29 +8,29 @@ import org.openqa.selenium.support.PageFactory;
 import app.WebApp;
 import io.qameta.allure.Step;
 
-public class CheckoutStepOne extends GenericPage  {
+public class CheckoutStepOne extends AbstractBasePage {
 
-	private WebDriver pageDriver;
-
-	public CheckoutStepOne() {
-		this.pageDriver = WebApp.getBrowser();
-		PageFactory.initElements(pageDriver, this);
-	}
+//	private WebDriver pageDriver;
+//
+//	public CheckoutStepOne() {
+//		this.pageDriver = WebApp.getBrowser();
+//		PageFactory.initElements(pageDriver, this);
+//	}
 
 	@FindBy(id = "first-name")
 	private WebElement firstNameInput;
-
 	@FindBy(id = "last-name")
 	private WebElement lastNameInput;
-
 	@FindBy(id = "postal-code")
 	private WebElement postalCodeInput;
-
 	@FindBy(xpath = "//input[@value ='CONTINUE']")
 	private WebElement continueButton;
-
 	@FindBy(xpath = "//h3[@data-test='error']")
-	public WebElement errorMessage;
+	private WebElement errorMessage;
+
+	public CheckoutStepOne() {
+		super();
+	}
 
 	@Step("Fill in Customer Information & click [Continue] button")
 	public CheckoutStepTwo continueCheckout(String firstName, String lastName, String postalCode) {

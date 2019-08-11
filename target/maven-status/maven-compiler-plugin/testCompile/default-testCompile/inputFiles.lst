@@ -6,7 +6,8 @@
 /Users/natalie/eclipse-workspace/aqa/src/test/java/pages/CartPage.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/LoginTestNegative_2.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/SortByNamesAsc.java
-/Users/natalie/eclipse-workspace/aqa/src/test/java/pages/GenericPage.java
+/Users/natalie/eclipse-workspace/aqa/src/test/java/pages/Header.java
+/Users/natalie/eclipse-workspace/aqa/src/test/java/pages/AbstractBasePage.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/app/WebApp.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/LoginTestNegative_4.java
 /Users/natalie/eclipse-workspace/aqa/src/test/java/tests/CheckoutWithThreeProducts.java

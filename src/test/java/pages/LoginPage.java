@@ -1,32 +1,26 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import app.WebApp;
 import io.qameta.allure.Step;
 
-public class LoginPage  extends GenericPage {
-	private WebDriver pageDriver;
-
-	public LoginPage() {
-		this.pageDriver = WebApp.getBrowser();
-		PageFactory.initElements(pageDriver, this);
-	}
+public class LoginPage extends AbstractBasePage {
 
 	@FindBy(id = "user-name")
-	public  WebElement usernameInput;
-
+	private WebElement usernameInput;
 	@FindBy(id = "password")
-	public  WebElement passwordInput;
-
+	private WebElement passwordInput;
 	@FindBy(css = "input[value='LOGIN']")
-	public  WebElement loginButton;
-
+	private WebElement loginButton;
 	@FindBy(css = "h3[data-test='error']")
-	public WebElement errorMessageWithoutLoginAndPassword;
+	private WebElement errorMessageWithoutLoginAndPassword;
+
+	public LoginPage() {
+		super();
+	}
 
 //	public void loginAs(String username, String password) {
 //		
@@ -35,7 +29,12 @@ public class LoginPage  extends GenericPage {
 //		loginButton.click();
 //		
 
-	
+	public boolean isLoginButtonDisplayed() {
+		loginButton.isDisplayed();
+
+		return true;
+	}
+
 	@Step("Login as with username [{0}] and password [{1}]")
 	public ProductsPage loginAs(String usermame, String password) {
 
@@ -47,13 +46,30 @@ public class LoginPage  extends GenericPage {
 
 	public LoginPage testLoginCredentials(String usermame, String password) {
 
+		WebDriverWait waiter1 = new WebDriverWait(getWebdriver(), 20);
+		waiter1.until(ExpectedConditions.elementToBeClickable(usernameInput));
+
+		WebDriverWait waiter2 = new WebDriverWait(getWebdriver(), 20);
+		waiter2.until(ExpectedConditions.elementToBeClickable(passwordInput));
+
+		WebDriverWait waiter3 = new WebDriverWait(getWebdriver(), 20);
+		waiter3.until(ExpectedConditions.elementToBeClickable(loginButton));
+
 		usernameInput.sendKeys(usermame);
 		passwordInput.sendKeys(password);
 		loginButton.click();
-		
+
 		return new LoginPage();
 //			return new LoginPage(errorMessageWithoutLoginAndPassword);
 
+	}
+
+	public boolean isErrorMessageDisplayed() {
+		return errorMessageWithoutLoginAndPassword.isDisplayed();
+	}
+
+	public String getErrorMessage() {
+		return errorMessageWithoutLoginAndPassword.getText();
 	}
 
 //	public static void UserIsNotAbleToLoginWithoutUsername(String password) {

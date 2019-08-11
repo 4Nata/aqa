@@ -48,10 +48,10 @@ public class LoginTestNegative_5 extends GenericTest {
 //		
 		
 
-		LoginPage nonExistedUserLoginIn = openLoginPage().testLoginCredentials("test_user", "test_password");
+		LoginPage loginPage = openLoginPage().testLoginCredentials("test_user", "test_password");
 
-		Assert.assertTrue(nonExistedUserLoginIn.errorMessageWithoutLoginAndPassword.isDisplayed());
-		Assert.assertEquals(nonExistedUserLoginIn.errorMessageWithoutLoginAndPassword.getText(),
+		Assert.assertTrue(loginPage.isErrorMessageDisplayed());
+		Assert.assertEquals(loginPage.getErrorMessage(),
 				"Epic sadface: Username and password do not match any user in this service");
 
 	}

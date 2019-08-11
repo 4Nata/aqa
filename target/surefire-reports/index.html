@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-smoke" class="navigator-link">
-              <span class="suite-name border-failed">smoke</span>
+              <span class="suite-name border-passed">smoke</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-smoke" class="navigator-link ">
-                    <span class="test-stats">5 tests</span>
+                    <span class="test-stats">6 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">14 methods, 1 failed,   13 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-smoke" class="hide-methods failed suite-smoke"> (hide)</a> <!-- hide-methods failed suite-smoke -->
-                      <a href="#" panel-name="suite-smoke" class="show-methods failed suite-smoke"> (show)</a> <!-- show-methods failed suite-smoke -->
-                    </span>
-                    <div class="method-list-content failed suite-smoke">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-smoke" title="tests.LoginTest" class="method navigator-link" hash-for-method="testUserIsAbleToLoginIntoApp">testUserIsAbleToLoginIntoApp</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-smoke -->
+                    <span class="method-stats">15 methods,   15 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -131,17 +117,27 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-smoke" title="tests.SortByPriceAsc" class="method navigator-link" hash-for-method="testSortByPriceAsc">testSortByPriceAsc</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-smoke" title="tests.SortByPriceDesc" class="method navigator-link" hash-for-method="testSortByPriceAsc">testSortByPriceAsc</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-smoke" title="tests.SortByPriceAsc" class="method navigator-link" hash-for-method="testSortByPriceAsc">testSortByPriceAsc</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-smoke" title="tests.AddProductToTheCart" class="method navigator-link" hash-for-method="testUserIsAbleToAddProductToCart">testUserIsAbleToAddProductToCart</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-smoke" title="tests.LogOutTest" class="method navigator-link" hash-for-method="testUserIsAbleToLogOutFromTheApp">testUserIsAbleToLogOutFromTheApp</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-smoke" title="tests.LoginTest" class="method navigator-link" hash-for-method="testUserIsAbleToLoginIntoApp">testUserIsAbleToLoginIntoApp</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -191,138 +187,17 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-smoke" class="panel smoke">
-          <div class="suite-smoke-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tests.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUserIsAbleToLoginIntoApp">
-                  </a> <!-- testUserIsAbleToLoginIntoApp -->
-                  <span class="method-name">testUserIsAbleToLoginIntoApp</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#user\-name&quot;}
-  (Session info: chrome=76.0.3809.87)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MacBook-Pro-Natalie.local&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;11.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.87, chrome: {chromedriverVersion: 75.0.3770.90 (a6dcaf7e3ec6f..., userDataDir: /var/folders/48/4nmq1c7j6xj...}, goog:chromeOptions: {debuggerAddress: localhost:62616}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b4cd7f422f4a977e7c87b57e9d78432f
-*** Element info: {Using=id, value=user-name}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy16.sendKeys(Unknown Source)
-	at pages.LoginPage.testLoginCredentials(LoginPage.java:50)
-	at pages.LoginPage.loginAs(LoginPage.java:42)
-	at tests.LoginTest.testUserIsAbleToLoginIntoApp(LoginTest.java:42)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 20 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-smoke-class-failed -->
           <div class="suite-smoke-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.LoginTestNegative_5</span>
+              <span class="class-name">tests.LoginTestNegative_2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testUserIsNotAbleToLoginIntoAppWithWrongCredentials">
-                  </a> <!-- testUserIsNotAbleToLoginIntoAppWithWrongCredentials -->
-                  <span class="method-name">testUserIsNotAbleToLoginIntoAppWithWrongCredentials</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-smoke-class-passed -->
-          <div class="suite-smoke-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.SortByPriceDesc</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testSortByPriceAsc">
-                  </a> <!-- testSortByPriceAsc -->
-                  <span class="method-name">testSortByPriceAsc</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-smoke-class-passed -->
-          <div class="suite-smoke-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.LoginTestNegative_3</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUserIsNotAbleToLoginWithoutUsername">
-                  </a> <!-- testUserIsNotAbleToLoginWithoutUsername -->
-                  <span class="method-name">testUserIsNotAbleToLoginWithoutUsername</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-smoke-class-passed -->
-          <div class="suite-smoke-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.CheckoutFieldsValidation</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validationCheckoutFields">
-                  </a> <!-- validationCheckoutFields -->
-                  <span class="method-name">validationCheckoutFields</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-smoke-class-passed -->
-          <div class="suite-smoke-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.SortByNamesDesc</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testProductsAreSortedByAsc">
-                  </a> <!-- testProductsAreSortedByAsc -->
-                  <span class="method-name">testProductsAreSortedByAsc</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-smoke-class-passed -->
-          <div class="suite-smoke-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tests.LoginTestNegative_1</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testUserIsNotAbleToLoginWithoutUsernameAndPassword">
-                  </a> <!-- testUserIsNotAbleToLoginWithoutUsernameAndPassword -->
-                  <span class="method-name">testUserIsNotAbleToLoginWithoutUsernameAndPassword</span>
+                  <a name="testUserIsNotAbleToLoginWithoutPassword">
+                  </a> <!-- testUserIsNotAbleToLoginWithoutPassword -->
+                  <span class="method-name">testUserIsNotAbleToLoginWithoutPassword</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -345,21 +220,6 @@ Session ID: b4cd7f422f4a977e7c87b57e9d78432f
           <div class="suite-smoke-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.LoginTestNegative_4</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLockedUserIsNotAbleToLogin">
-                  </a> <!-- testLockedUserIsNotAbleToLogin -->
-                  <span class="method-name">testLockedUserIsNotAbleToLogin</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-smoke-class-passed -->
-          <div class="suite-smoke-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">tests.CheckoutWithOneProduct</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -375,14 +235,14 @@ Session ID: b4cd7f422f4a977e7c87b57e9d78432f
           <div class="suite-smoke-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.LoginTestNegative_2</span>
+              <span class="class-name">tests.LoginTestNegative_3</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testUserIsNotAbleToLoginWithoutPassword">
-                  </a> <!-- testUserIsNotAbleToLoginWithoutPassword -->
-                  <span class="method-name">testUserIsNotAbleToLoginWithoutPassword</span>
+                  <a name="testUserIsNotAbleToLoginWithoutUsername">
+                  </a> <!-- testUserIsNotAbleToLoginWithoutUsername -->
+                  <span class="method-name">testUserIsNotAbleToLoginWithoutUsername</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -390,7 +250,22 @@ Session ID: b4cd7f422f4a977e7c87b57e9d78432f
           <div class="suite-smoke-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tests.SortByNamesAsc</span>
+              <span class="class-name">tests.LogOutTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserIsAbleToLogOutFromTheApp">
+                  </a> <!-- testUserIsAbleToLogOutFromTheApp -->
+                  <span class="method-name">testUserIsAbleToLogOutFromTheApp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-passed -->
+          <div class="suite-smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.SortByNamesDesc</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -420,6 +295,111 @@ Session ID: b4cd7f422f4a977e7c87b57e9d78432f
           <div class="suite-smoke-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">tests.LoginTestNegative_5</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserIsNotAbleToLoginIntoAppWithWrongCredentials">
+                  </a> <!-- testUserIsNotAbleToLoginIntoAppWithWrongCredentials -->
+                  <span class="method-name">testUserIsNotAbleToLoginIntoAppWithWrongCredentials</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-passed -->
+          <div class="suite-smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.CheckoutFieldsValidation</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validationCheckoutFields">
+                  </a> <!-- validationCheckoutFields -->
+                  <span class="method-name">validationCheckoutFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-passed -->
+          <div class="suite-smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserIsAbleToLoginIntoApp">
+                  </a> <!-- testUserIsAbleToLoginIntoApp -->
+                  <span class="method-name">testUserIsAbleToLoginIntoApp</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-passed -->
+          <div class="suite-smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.LoginTestNegative_4</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLockedUserIsNotAbleToLogin">
+                  </a> <!-- testLockedUserIsNotAbleToLogin -->
+                  <span class="method-name">testLockedUserIsNotAbleToLogin</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-passed -->
+          <div class="suite-smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.SortByNamesAsc</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testProductsAreSortedByAsc">
+                  </a> <!-- testProductsAreSortedByAsc -->
+                  <span class="method-name">testProductsAreSortedByAsc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-passed -->
+          <div class="suite-smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.SortByPriceDesc</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSortByPriceAsc">
+                  </a> <!-- testSortByPriceAsc -->
+                  <span class="method-name">testSortByPriceAsc</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-passed -->
+          <div class="suite-smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tests.LoginTestNegative_1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserIsNotAbleToLoginWithoutUsernameAndPassword">
+                  </a> <!-- testUserIsNotAbleToLoginWithoutUsernameAndPassword -->
+                  <span class="method-name">testUserIsNotAbleToLoginWithoutUsernameAndPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-smoke-class-passed -->
+          <div class="suite-smoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">tests.CheckoutWithThreeProducts</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -441,13 +421,13 @@ Session ID: b4cd7f422f4a977e7c87b57e9d78432f
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;smoke&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Success Login&quot; verbose=&quot;0&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;smoke&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Success Login&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Success Login --&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Login_Negative scenarios&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Login_Negative scenarios&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.LoginTestNegative_1&quot;/&gt;
       &lt;class name=&quot;tests.LoginTestNegative_2&quot;/&gt;
@@ -456,19 +436,24 @@ Session ID: b4cd7f422f4a977e7c87b57e9d78432f
       &lt;class name=&quot;tests.LoginTestNegative_5&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Login_Negative scenarios --&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Adding products to the Cart&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Logout&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;tests.LogOutTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Logout --&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Adding products to the Cart&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.AddProductToTheCart&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Adding products to the Cart --&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Checkout&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Checkout&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.CheckoutWithOneProduct&quot;/&gt;
       &lt;class name=&quot;tests.CheckoutWithThreeProducts&quot;/&gt;
       &lt;class name=&quot;tests.CheckoutFieldsValidation&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Checkout --&gt;
-  &lt;test thread-count=&quot;2&quot; parallel=&quot;tests&quot; name=&quot;Sorting Products&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; parallel=&quot;tests&quot; name=&quot;Sorting Products&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.SortByNamesAsc&quot;/&gt;
       &lt;class name=&quot;tests.SortByNamesDesc&quot;/&gt;
@@ -491,6 +476,9 @@ Session ID: b4cd7f422f4a977e7c87b57e9d78432f
               </li>
               <li>
                 <span class="test-name">Login_Negative scenarios (5 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Logout (1 class)</span>
               </li>
               <li>
                 <span class="test-name">Adding products to the Cart (1 class)</span>
@@ -525,68 +513,72 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(14);
+data.addRows(15);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'validationCheckoutFields')
 data.setCell(0, 2, 'tests.CheckoutFieldsValidation')
-data.setCell(0, 3, 6590);
+data.setCell(0, 3, 8126);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testUserIsAbleToPlaceOrderWithOneProduct')
 data.setCell(1, 2, 'tests.CheckoutWithOneProduct')
-data.setCell(1, 3, 4740);
+data.setCell(1, 3, 6215);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testUserIsAbleToPlaceOrderWithThreeProducts')
 data.setCell(2, 2, 'tests.CheckoutWithThreeProducts')
-data.setCell(2, 3, 4701);
+data.setCell(2, 3, 6054);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testUserIsAbleToLoginIntoApp')
 data.setCell(3, 2, 'tests.LoginTest')
-data.setCell(3, 3, 4282);
+data.setCell(3, 3, 5740);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testUserIsAbleToAddProductToCart')
-data.setCell(4, 2, 'tests.AddProductToTheCart')
-data.setCell(4, 3, 4021);
+data.setCell(4, 1, 'testUserIsAbleToLogOutFromTheApp')
+data.setCell(4, 2, 'tests.LogOutTest')
+data.setCell(4, 3, 5556);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testSortByPriceAsc')
-data.setCell(5, 2, 'tests.SortByPriceDesc')
-data.setCell(5, 3, 3877);
+data.setCell(5, 1, 'testProductsAreSortedByAsc')
+data.setCell(5, 2, 'tests.SortByNamesAsc')
+data.setCell(5, 3, 5438);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testProductsAreSortedByAsc')
-data.setCell(6, 2, 'tests.SortByNamesDesc')
-data.setCell(6, 3, 3823);
+data.setCell(6, 1, 'testUserIsAbleToAddProductToCart')
+data.setCell(6, 2, 'tests.AddProductToTheCart')
+data.setCell(6, 3, 5183);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'testProductsAreSortedByAsc')
-data.setCell(7, 2, 'tests.SortByNamesAsc')
-data.setCell(7, 3, 3803);
+data.setCell(7, 2, 'tests.SortByNamesDesc')
+data.setCell(7, 3, 5086);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'testSortByPriceAsc')
 data.setCell(8, 2, 'tests.SortByPriceAsc')
-data.setCell(8, 3, 3660);
+data.setCell(8, 3, 5074);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testUserIsNotAbleToLoginWithoutUsernameAndPassword')
-data.setCell(9, 2, 'tests.LoginTestNegative_1')
-data.setCell(9, 3, 3496);
+data.setCell(9, 1, 'testSortByPriceAsc')
+data.setCell(9, 2, 'tests.SortByPriceDesc')
+data.setCell(9, 3, 4935);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'testUserIsNotAbleToLoginWithoutPassword')
-data.setCell(10, 2, 'tests.LoginTestNegative_2')
-data.setCell(10, 3, 2903);
+data.setCell(10, 1, 'testUserIsNotAbleToLoginIntoAppWithWrongCredentials')
+data.setCell(10, 2, 'tests.LoginTestNegative_5')
+data.setCell(10, 3, 2484);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testUserIsNotAbleToLoginIntoAppWithWrongCredentials')
-data.setCell(11, 2, 'tests.LoginTestNegative_5')
-data.setCell(11, 3, 2493);
+data.setCell(11, 1, 'testLockedUserIsNotAbleToLogin')
+data.setCell(11, 2, 'tests.LoginTestNegative_4')
+data.setCell(11, 3, 2475);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testLockedUserIsNotAbleToLogin')
-data.setCell(12, 2, 'tests.LoginTestNegative_4')
-data.setCell(12, 3, 2418);
+data.setCell(12, 1, 'testUserIsNotAbleToLoginWithoutPassword')
+data.setCell(12, 2, 'tests.LoginTestNegative_2')
+data.setCell(12, 3, 2413);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'testUserIsNotAbleToLoginWithoutUsername')
 data.setCell(13, 2, 'tests.LoginTestNegative_3')
-data.setCell(13, 3, 2395);
+data.setCell(13, 3, 2411);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'testUserIsNotAbleToLoginWithoutUsernameAndPassword')
+data.setCell(14, 2, 'tests.LoginTestNegative_1')
+data.setCell(14, 3, 2384);
 window.suiteTableData['smoke']= { tableData: data, tableDiv: 'times-div-smoke'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 53 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-smoke">
               </div> <!-- times-div-smoke -->
             </div> <!-- times-div -->
@@ -612,254 +604,228 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTestNegative_1</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testUserIsNotAbleToLoginWithoutUsernameAndPassword</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testUserIsAbleToLoginIntoApp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTestNegative_1</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">3714 ms</span>
+                <span class="method-start">5819 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">attachScreenshot</span>
-                <span class="method-start">4310 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTestNegative_1</div> <!-- chronological-class-name -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">4334 ms</span>
+                <span class="method-start">6486 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LoginTestNegative_1</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testUserIsNotAbleToLoginWithoutUsernameAndPassword</span>
+                <span class="method-start">6594 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenshot</span>
+                <span class="method-start">8984 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">9420 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTestNegative_2</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testUserIsNotAbleToLoginWithoutPassword</span>
-                <span class="method-start">4416 ms</span>
+                <span class="method-start">9501 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-class after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">4780 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.AddProductToTheCart</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testUserIsAbleToAddProductToCart</span>
-                <span class="method-start">4909 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTestNegative_2</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">7320 ms</span>
+                <span class="method-start">11915 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">7793 ms</span>
+                <span class="method-start">12347 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTestNegative_3</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testUserIsNotAbleToLoginWithoutUsername</span>
-                <span class="method-start">7873 ms</span>
+                <span class="method-start">12432 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.AddProductToTheCart</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">8967 ms</span>
+                <span class="method-start">14843 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">9450 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CheckoutWithOneProduct</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testUserIsAbleToPlaceOrderWithOneProduct</span>
-                <span class="method-start">9546 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTestNegative_3</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">attachScreenshot</span>
-                <span class="method-start">10269 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">10761 ms</span>
+                <span class="method-start">15284 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTestNegative_4</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testLockedUserIsNotAbleToLogin</span>
-                <span class="method-start">10849 ms</span>
+                <span class="method-start">15365 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">13268 ms</span>
+                <span class="method-start">17875 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">13764 ms</span>
+                <span class="method-start">18308 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.LoginTestNegative_5</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testUserIsNotAbleToLoginIntoAppWithWrongCredentials</span>
-                <span class="method-start">13861 ms</span>
+                <span class="method-start">18393 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CheckoutWithOneProduct</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">14287 ms</span>
+                <span class="method-start">20877 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">14833 ms</span>
+                <span class="method-start">21309 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.LogOutTest</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testUserIsAbleToLogOutFromTheApp</span>
+                <span class="method-start">21394 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenshot</span>
+                <span class="method-start">26951 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">27400 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.AddProductToTheCart</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testUserIsAbleToAddProductToCart</span>
+                <span class="method-start">27515 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenshot</span>
+                <span class="method-start">32699 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">33153 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.CheckoutWithOneProduct</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testUserIsAbleToPlaceOrderWithOneProduct</span>
+                <span class="method-start">33248 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenshot</span>
+                <span class="method-start">39464 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">39977 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.CheckoutWithThreeProducts</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testUserIsAbleToPlaceOrderWithThreeProducts</span>
-                <span class="method-start">14917 ms</span>
+                <span class="method-start">40061 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.LoginTestNegative_5</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">16355 ms</span>
+                <span class="method-start">46121 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">16820 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.SortByNamesAsc</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">testProductsAreSortedByAsc</span>
-                <span class="method-start">16930 ms</span>
-              </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CheckoutWithThreeProducts</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">attachScreenshot</span>
-                <span class="method-start">19627 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">20125 ms</span>
+                <span class="method-start">46611 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.CheckoutFieldsValidation</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">validationCheckoutFields</span>
-                <span class="method-start">20232 ms</span>
+                <span class="method-start">46705 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.SortByNamesAsc</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">20734 ms</span>
+                <span class="method-start">54832 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">21423 ms</span>
+                <span class="method-start">55312 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SortByNamesAsc</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">testProductsAreSortedByAsc</span>
+                <span class="method-start">55402 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">attachScreenshot</span>
+                <span class="method-start">60840 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApp</span>
+                <span class="method-start">61441 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SortByNamesDesc</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testProductsAreSortedByAsc</span>
-                <span class="method-start">21516 ms</span>
+                <span class="method-start">61524 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">25339 ms</span>
+                <span class="method-start">66611 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">26020 ms</span>
+                <span class="method-start">67267 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SortByPriceAsc</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testSortByPriceAsc</span>
-                <span class="method-start">26142 ms</span>
+                <span class="method-start">67351 ms</span>
               </div> <!-- test-method -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.CheckoutFieldsValidation</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">26823 ms</span>
+                <span class="method-start">72426 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">27293 ms</span>
-              </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">tests.SortByPriceAsc</div> <!-- chronological-class-name -->
-              <div class="configuration-method after">
-                <span class="method-name">attachScreenshot</span>
-                <span class="method-start">29803 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">closeApp</span>
-                <span class="method-start">30493 ms</span>
+                <span class="method-start">73056 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.SortByPriceDesc</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testSortByPriceAsc</span>
-                <span class="method-start">30578 ms</span>
+                <span class="method-start">73145 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">attachScreenshot</span>
-                <span class="method-start">34456 ms</span>
+                <span class="method-start">78081 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">closeApp</span>
-                <span class="method-start">35091 ms</span>
+                <span class="method-start">78719 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -46,10 +46,10 @@ public class LoginTestNegative_2 extends GenericTest {
 		
 		
 		
-		LoginPage loginWithoutPassword = openLoginPage().testLoginCredentials("standard_user", "");
+		LoginPage loginPage = openLoginPage().testLoginCredentials("standard_user", "");
 		
-		Assert.assertTrue(loginWithoutPassword.errorMessageWithoutLoginAndPassword.isDisplayed());
-		Assert.assertEquals(loginWithoutPassword.errorMessageWithoutLoginAndPassword.getText(),
+		Assert.assertTrue(loginPage.isErrorMessageDisplayed());
+		Assert.assertEquals(loginPage.getErrorMessage(),
 				"Epic sadface: Password is required");
 
 	}
