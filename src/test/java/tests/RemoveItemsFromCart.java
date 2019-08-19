@@ -15,7 +15,7 @@ public class RemoveItemsFromCart extends GenericTest {
 	@Test
 	public void testUserIsAbleToRemoveProductsFromToCart() {
 
-		ProductsPage a = new ProductsPage();
+		CartPage a = new CartPage();
 
 		a.getProductsNames();
 
@@ -32,8 +32,7 @@ public class RemoveItemsFromCart extends GenericTest {
 
 		Assert.assertFalse(a.getProductsNames().contains("Test.allTheThings() T-Shirt (Red)"),
 				"The 'Sauce Labs Onesie' products is not removed from the Cart");
-//		
-//		Assert.assertNull(cartPage.removeButton);
+
 	}
 
 }

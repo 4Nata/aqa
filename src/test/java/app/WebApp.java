@@ -2,7 +2,7 @@ package app;
 
 import org.openqa.selenium.WebDriver;
 
-import Tools.BrowserFactory;
+import tools.BrowserFactory;
 
 public class WebApp {
 	

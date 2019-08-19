@@ -10,13 +10,6 @@ import io.qameta.allure.Step;
 
 public class CheckoutStepOne extends AbstractBasePage {
 
-//	private WebDriver pageDriver;
-//
-//	public CheckoutStepOne() {
-//		this.pageDriver = WebApp.getBrowser();
-//		PageFactory.initElements(pageDriver, this);
-//	}
-
 	@FindBy(id = "first-name")
 	private WebElement firstNameInput;
 	@FindBy(id = "last-name")
@@ -29,21 +22,9 @@ public class CheckoutStepOne extends AbstractBasePage {
 	private WebElement errorMessage;
 
 	public Header header = new Header();
-	
+
 	public CheckoutStepOne() {
 		super();
-	}
-
-	@Step("Fill in Customer Information & click [Continue] button")
-	public CheckoutStepTwo continueCheckout(String firstName, String lastName, String postalCode) {
-
-		firstNameInput.sendKeys(firstName);
-		lastNameInput.sendKeys(lastName);
-		postalCodeInput.sendKeys(postalCode);
-		continueButton.click();
-
-		return new CheckoutStepTwo();
-
 	}
 
 	@Step("Fill in the Checkout fields & click [Continue] button")
@@ -58,6 +39,21 @@ public class CheckoutStepOne extends AbstractBasePage {
 
 	}
 
+	@Step("Fill in Customer Information & click [Continue] button")
+	public CheckoutStepTwo continueCheckout(String firstName, String lastName, String postalCode) {
+
+//		firstNameInput.sendKeys(firstName);
+//		lastNameInput.sendKeys(lastName);
+//		postalCodeInput.sendKeys(postalCode);
+//		continueButton.click();
+
+		checkoutFieldsValidation(firstName, lastName, postalCode);
+
+		return new CheckoutStepTwo();
+
+	}
+
+	@Step("Observe the error message text")
 	public String getErrorMessageText() {
 
 		String errorMessageText = errorMessage.getText();

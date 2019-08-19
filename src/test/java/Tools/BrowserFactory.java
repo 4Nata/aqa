@@ -1,4 +1,4 @@
-package Tools;
+package tools;
 
 import java.io.File;
 
@@ -41,11 +41,11 @@ public class BrowserFactory {
 
 		}
 	}
-	
+
 	public void closeDriver() {
-		
+
 		try {
-			if(driver != null) {
+			if (driver != null) {
 				driver.quit();
 			}
 		} finally {
@@ -75,9 +75,7 @@ public class BrowserFactory {
 
 				throw new IllegalStateException("You cannot  start the site on " + getOsName());
 			}
-//			System.setProperty("webdriver.safari.driver",
-//					System.getProperty("user.dir") + File.separator + "drivers" + File.separator + getOsName()
-//							+ File.separator + BROWSER.toLowerCase() + File.separator + "Safari");
+
 			return new SafariDriver();
 
 		case "edge":

@@ -17,7 +17,7 @@ public class LogoutFromCheckoutPage extends GenericTest {
 		LoginPage loginPage = openLoginPage().loginAs("standard_user", "secret_sauce")
 				.addProductToCart("Sauce Labs Onesie").header.openCart().startCheckout().header.logout();
 
-		Assert.assertTrue(loginPage.isLoginButtonDisplayed());
+		Assert.assertTrue(loginPage.isLoginButtonDisplayed(), "Login page should be opened");
 
 	}
 

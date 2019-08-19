@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -22,17 +24,15 @@ public class LoginPage extends AbstractBasePage {
 		super();
 	}
 
-//	public void loginAs(String username, String password) {
-//		
-//		usernameInput.sendKeys(username);
-//		passwordInput.sendKeys(password);
-//		loginButton.click();
-//		
-
+	@Step("Check that [Login] button is displayed")
 	public boolean isLoginButtonDisplayed() {
-		loginButton.isDisplayed();
+		try {
+			loginButton.isDisplayed();
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
 
-		return true;
 	}
 
 	@Step("Login as with username [{0}] and password [{1}]")
@@ -44,6 +44,7 @@ public class LoginPage extends AbstractBasePage {
 
 	}
 
+	@Step("Enter {username} and {password}")
 	public LoginPage testLoginCredentials(String usermame, String password) {
 
 		WebDriverWait waiter1 = new WebDriverWait(getWebdriver(), 20);
@@ -60,30 +61,23 @@ public class LoginPage extends AbstractBasePage {
 		loginButton.click();
 
 		return new LoginPage();
-//			return new LoginPage(errorMessageWithoutLoginAndPassword);
 
 	}
 
+	@Step("Check that Error message is displayed")
 	public boolean isErrorMessageDisplayed() {
-		return errorMessageWithoutLoginAndPassword.isDisplayed();
+		try {
+			errorMessageWithoutLoginAndPassword.isDisplayed();
+			return true;
+		} catch (NoSuchElementException e) {
+
+			return false;
+		}
 	}
 
+	@Step("Observe error message text")
 	public String getErrorMessage() {
 		return errorMessageWithoutLoginAndPassword.getText();
 	}
-
-//	public static void UserIsNotAbleToLoginWithoutUsername(String password) {
-//
-//		passwordInput.sendKeys(password);
-//		loginButton.click();
-
-//	}
-
-//	public static void lockedAndNonExistedUserLoginIn(String username, String password) {
-//		usernameInput.sendKeys(username);
-//		passwordInput.sendKeys(password);
-//		loginButton.click();
-//		
-//	}
 
 }

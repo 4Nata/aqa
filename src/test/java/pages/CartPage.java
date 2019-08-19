@@ -1,5 +1,9 @@
 package pages;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,12 +15,14 @@ import io.qameta.allure.Step;
 
 public class CartPage extends AbstractBasePage {
 
-//	@FindBy(xpath = "//span[@class='fa-layers-counter shopping_cart_badge' and contains(text(), '1')]")
-//	private WebElement cartBadge;
 	@FindBy(xpath = "//a[@class='btn_action checkout_button']")
 	private WebElement checkoutButton;
 	@FindBy(xpath = "//button[@class='btn_secondary cart_button' and contains(text(), 'REMOVE')]")
 	private WebElement removeButton;
+	@FindBy(css = "div.inventory_item_name")
+	private List<WebElement> productNames;
+	@FindBy(css = "div.inventory_item_price")
+	private List<WebElement> productPrices;
 
 	public CartPage() {
 		super();
@@ -43,16 +49,47 @@ public class CartPage extends AbstractBasePage {
 
 		}
 
-//		//div[@class='cart_item_label']//div[contains(text(), '" + productNames[i]
-//		+ "')]//ancestor::div[@class='cart_item_label']/descendant::button[@class='btn_secondary cart_button']
-//		
 		return this;
 	}
 
+	@Step("Check that [Remove] button is displayed")
 	public boolean isRemoveButtonDisplayed() {
 
-		removeButton.isDisplayed();
-		return true;
+		try {
+
+			removeButton.isDisplayed();
+
+			return true;
+
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+
+	}
+
+	@Step("Observe all the products names")
+	public List<String> getProductsNames() {
+		List<String> names = new ArrayList<>();
+		for (int i = 0; i < productNames.size(); i++) {
+			String productName = productNames.get(i).getText();
+			names.add(productName);
+		}
+
+		return names;
+
+	}
+	
+	@Step("Observe all the products prices")
+	public List<Double> getProductsPrices() {
+		List<Double> prices = new ArrayList<>();
+		for (int i = 0; i < productPrices.size(); i++) {
+			String productPrice = productPrices.get(i).getText();
+			double price = Double.parseDouble(productPrice.replace("$", ""));
+			prices.add(price);
+		}
+
+		return prices;
+
 	}
 
 }

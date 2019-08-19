@@ -15,8 +15,6 @@ import io.qameta.allure.Step;
 
 public class ProductsPage extends AbstractBasePage {
 
-//	@FindBy(id = "shopping_cart_container")
-//	private WebElement shoppingCartIcon;
 	@FindBy(css = "div.inventory_item_price")
 	private List<WebElement> productPrices;
 	@FindBy(css = "div.inventory_item_name")
@@ -25,20 +23,14 @@ public class ProductsPage extends AbstractBasePage {
 	private WebElement sortDropdown;
 	@FindBy(xpath = "//button[contains(text(), 'ADD TO CART')]")
 	private WebElement addToCartButton;
-//	@FindBy(id = "#shopping_cart_container")
-//	private WebElement shoppingCartContainer;
-//	@FindBy(css = "div.bm-burger-button button")
-//	private WebElement menuButton;
-//	@FindBy(xpath = "//a[@id='logout_sidebar_link']")
-//	private WebElement logoutButton;
 
 	public ProductsPage() {
 		super();
 	}
 
-//	
 	public Header header = new Header();
 
+	@Step("Check that mini Cart icon is displayed")
 	public boolean isUserLoggedIn() {
 		try {
 
@@ -52,6 +44,7 @@ public class ProductsPage extends AbstractBasePage {
 
 	}
 
+	@Step("Observe all the products names")
 	public List<String> getProductsNames() {
 		List<String> names = new ArrayList<>();
 		for (int i = 0; i < productNames.size(); i++) {
@@ -77,6 +70,7 @@ public class ProductsPage extends AbstractBasePage {
 		return this;
 	}
 
+	@Step("Observe all the products prices")
 	public List<Double> getProductsPrices() {
 		List<Double> prices = new ArrayList<>();
 		for (int i = 0; i < productPrices.size(); i++) {
@@ -103,15 +97,8 @@ public class ProductsPage extends AbstractBasePage {
 		return this;
 	}
 
-	// (List<String> productNames)
-
 	@Step("Add Product To The Cart")
 	public ProductsPage addProductToCart(String... productNames) {
-
-//		for (int i=0; i < productNames.size(); i++ ) {
-//
-//		pageDriver.findElement(By.xpath("//div[@class='inventory_item']//div[contains(text(), '" + productNames.get(i)
-//				+ "')]//ancestor::div[@class='inventory_item']//button[@class='btn_primary btn_inventory']")).click();
 
 		for (int i = 0; i < productNames.length; i++) {
 
@@ -123,23 +110,4 @@ public class ProductsPage extends AbstractBasePage {
 		}
 		return this;
 	}
-
-//	public CartPage addThreeProductsToCart() {
-//
-//		addToCartButton.click();
-//		addToCartButton.click();
-//		addToCartButton.click();
-//
-//		shoppingCartIcon.click();
-//
-//		return new CartPage();
-//	}
-
 }
-
-//public ProductsPage addToCart(String productName) {   залишаємося на цій самій сторінці - метод повертає сам себе
-//	
-//	
-//	
-//	return this;
-//}

@@ -17,36 +17,11 @@ import pages.LoginPage;
 
 public class LoginTestNegative_5 extends GenericTest {
 
-//	private WebDriver driver = null;
-
-	
 	@Feature("Login with WRONG CREDENTIALS")
 	@Story("PLH-449")
 	@Test
 
 	public void testUserIsNotAbleToLoginIntoAppWithWrongCredentials() {
-//
-//		System.setProperty("webdriver.chrome.driver",
-//				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
-//
-//		driver = new ChromeDriver();
-//
-//		driver.get("https://www.saucedemo.com");
-//
-//		driver.findElement(By.id("user-name")).sendKeys("test_user");
-//
-//		driver.findElement(By.id("password")).sendKeys("test_password");
-//
-//		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
-//
-//		WebElement error = driver.findElement(By.cssSelector("h3[data-test='error']"));
-//
-//		
-//
-//		Assert.assertTrue(error.isDisplayed());
-//		Assert.assertEquals(error.getText(), "Epic sadface: Username and password do not match any user in this service");
-//		
-		
 
 		LoginPage loginPage = openLoginPage().testLoginCredentials("test_user", "test_password");
 

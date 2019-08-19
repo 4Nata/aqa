@@ -12,21 +12,18 @@ import io.qameta.allure.Story;
 import pages.ProductsPage;
 
 public class SortByPriceDesc extends GenericTest {
-	
-	
+
 	@Feature("Products Sorting")
 	@Story("PLH-455")
 	@Test
 	public void testSortByPriceAsc() {
-		
-		
-		
+
 		ProductsPage productsPage = openLoginPage().loginAs("standard_user", "secret_sauce").sortByPriceDesc();
-		
+
 		List<Double> prices = productsPage.getProductsPrices();
-		
+
 		Assert.assertTrue(Ordering.natural().reverse().isOrdered(prices));
 
-}
-	
+	}
+
 }

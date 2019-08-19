@@ -17,40 +17,15 @@ import pages.LoginPage;
 
 public class LoginTestNegative_4 extends GenericTest {
 
-//	private WebDriver driver = null;
-
-	
-
 	@Feature("Login as LOCKED user")
 	@Story("PLH-447")
 	@Test
 	public void testLockedUserIsNotAbleToLogin() {
 
-//		System.setProperty("webdriver.chrome.driver",
-//				System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver");
-//
-//		this.driver = new ChromeDriver();
-//
-//		driver.get("https://www.saucedemo.com");
-//		driver.findElement(By.id("user-name")).sendKeys("locked_out_user");
-//		driver.findElement(By.id("password")).sendKeys("secret_sauce");
-//		driver.findElement(By.cssSelector("input[value='LOGIN']")).click();
-//
-//		WebElement error = driver.findElement(By.cssSelector("h3[data-test='error']"));
-//
-//		
-//		Assert.assertTrue(error.isDisplayed());
-//		Assert.assertEquals(error.getText(), "Epic sadface: Sorry, this user has been locked out.");
-//		
-//		driver.close();
-
-		
-
 		LoginPage loginPage = openLoginPage().testLoginCredentials("locked_out_user", "secret_sauce");
 
 		Assert.assertTrue(loginPage.isErrorMessageDisplayed());
-		Assert.assertEquals(loginPage.getErrorMessage(),
-				"Epic sadface: Sorry, this user has been locked out.");
+		Assert.assertEquals(loginPage.getErrorMessage(), "Epic sadface: Sorry, this user has been locked out.");
 	}
 
 }

@@ -23,6 +23,10 @@ public class CheckoutWithThreeProducts extends GenericTest {
 				"The expected url should be the following "
 						+ "https://www.saucedemo.com/checkout-complete.html - but actula url is - "
 						+ WebApp.getBrowser().getCurrentUrl());
+		
+		Assert.assertTrue(checkout.isSuccessMessageDisplayed());
+
+		Assert.assertEquals(checkout.getSuccessMessageText(), "THANK YOU FOR YOUR ORDER");
 
 	}
 

@@ -1,13 +1,12 @@
 package pages;
 
-import org.openqa.selenium.WebDriver;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import app.WebApp;
 import io.qameta.allure.Step;
 
 public class Header extends AbstractBasePage {
@@ -27,15 +26,18 @@ public class Header extends AbstractBasePage {
 
 	public Header() {
 		super();
-//		this.pageDriver = WebApp.getBrowser();
-//		PageFactory.initElements(pageDriver, this);
 	}
 
+	@Step("Check that mini Cart icon is displayed")
 	public boolean isMiniCartIconDisplayed() {
 
-		shoppingCartIcon.isDisplayed();
+		try {
+			shoppingCartIcon.isDisplayed();
+			return true;
+		} catch (NoSuchElementException e) {
+			return false;
+		}
 
-		return true;
 	}
 
 	@Step("Click [Logout] button to logout from the app")
@@ -60,15 +62,23 @@ public class Header extends AbstractBasePage {
 		return new CartPage();
 	}
 
+	@Step("Check that Cart badge is displayed")
 	public boolean cartBadgeisDisplayed() {
 
-		cartBadge.isDisplayed();
-		return true;
+		try {
+			cartBadge.isDisplayed();
+			return true;
+
+		} catch (NoSuchElementException e) {
+			return false;
+		}
+
 	}
 
+	@Step("Click mini Cart icon")
 	public CartPage clickMiniCart() {
 		shoppingCartIcon.click();
-		// waitForAppear(checkoutButton);
+
 		return new CartPage();
 	}
 
