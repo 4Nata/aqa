@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import app.WebApp;
 import io.qameta.allure.Step;
 
 public class Header extends AbstractBasePage {
@@ -45,7 +46,7 @@ public class Header extends AbstractBasePage {
 
 		menuButton.click();
 
-		WebDriverWait waiter = new WebDriverWait(getWebdriver(), 20); // wait 10 seconds
+		WebDriverWait waiter = new WebDriverWait(WebApp.getBrowser(), 20); 
 		waiter.until(ExpectedConditions.elementToBeClickable(logoutButton));
 
 		logoutButton.click();

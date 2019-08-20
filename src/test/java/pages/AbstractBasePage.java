@@ -15,9 +15,14 @@ public abstract class AbstractBasePage {
 		PageFactory.initElements(pageDriver, this);
 	}
 
-	public WebDriver getWebdriver() {
-		return pageDriver;
-
+//	public WebDriver getWebdriver() {
+//		return pageDriver;
+//
+//	}
+	
+	public Header header() {
+		
+		return new Header();
 	}
 
 	@Step("Click Cart icon")

@@ -7,10 +7,9 @@ import java.util.NoSuchElementException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
+import app.WebApp;
 import io.qameta.allure.Step;
 
 public class ProductsPage extends AbstractBasePage {
@@ -102,7 +101,7 @@ public class ProductsPage extends AbstractBasePage {
 
 		for (int i = 0; i < productNames.length; i++) {
 
-			getWebdriver().findElement(By.xpath("//div[@class='inventory_item']//div[contains(text(), '"
+			WebApp.getBrowser().findElement(By.xpath("//div[@class='inventory_item']//div[contains(text(), '"
 					+ productNames[i]
 					+ "')]//ancestor::div[@class='inventory_item']//button[@class='btn_primary btn_inventory']"))
 					.click();

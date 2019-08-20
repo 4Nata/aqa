@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="155.849" tests="17" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="104.45" tests="17" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -64,21 +64,21 @@
     <property name="java.class.version" value="55.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="testUserIsAbleToLoginIntoApp" classname="tests.LoginTest" time="11.257"/>
-  <testcase name="testUserIsNotAbleToLoginWithoutUsernameAndPassword" classname="tests.LoginTestNegative_1" time="3.487"/>
-  <testcase name="testUserIsNotAbleToLoginWithoutPassword" classname="tests.LoginTestNegative_2" time="2.677"/>
-  <testcase name="testUserIsNotAbleToLoginWithoutUsername" classname="tests.LoginTestNegative_3" time="2.791"/>
-  <testcase name="testLockedUserIsNotAbleToLogin" classname="tests.LoginTestNegative_4" time="3.617"/>
-  <testcase name="testUserIsNotAbleToLoginIntoAppWithWrongCredentials" classname="tests.LoginTestNegative_5" time="2.821"/>
-  <testcase name="testUserIsAbleToLogOutFromTheApp" classname="tests.LogOutTest" time="11.597"/>
-  <testcase name="testUserIsAbleToAddProductToCart" classname="tests.AddProductToTheCart" time="6.037"/>
-  <testcase name="testUserIsAbleToRemoveProductsFromToCart" classname="tests.RemoveItemsFromCart" time="28.231"/>
-  <testcase name="testUserIsAbleToPlaceOrderWithOneProduct" classname="tests.CheckoutWithOneProduct" time="10.446"/>
-  <testcase name="testUserIsAbleToPlaceOrderWithThreeProducts" classname="tests.CheckoutWithThreeProducts" time="7.406"/>
-  <testcase name="validationCheckoutFields" classname="tests.CheckoutFieldsValidation" time="9.837"/>
-  <testcase name="testUserIsAbleToLogOutFromCheckoutPage" classname="tests.LogoutFromCheckoutPage" time="7.331"/>
-  <testcase name="testProductsAreSortedByAsc" classname="tests.SortByNamesAsc" time="8.943"/>
-  <testcase name="testProductsAreSortedByAsc" classname="tests.SortByNamesDesc" time="12.774"/>
-  <testcase name="testSortByPriceAsc" classname="tests.SortByPriceAsc" time="5.061"/>
-  <testcase name="testSortByPriceAsc" classname="tests.SortByPriceDesc" time="5.547"/>
+  <testcase name="testUserIsAbleToLoginIntoApp" classname="tests.LoginTest" time="6.589"/>
+  <testcase name="testUserIsNotAbleToLoginWithoutUsernameAndPassword" classname="tests.LoginTestNegative_1" time="2.489"/>
+  <testcase name="testUserIsNotAbleToLoginWithoutPassword" classname="tests.LoginTestNegative_2" time="2.245"/>
+  <testcase name="testUserIsNotAbleToLoginWithoutUsername" classname="tests.LoginTestNegative_3" time="2.44"/>
+  <testcase name="testLockedUserIsNotAbleToLogin" classname="tests.LoginTestNegative_4" time="2.473"/>
+  <testcase name="testUserIsNotAbleToLoginIntoAppWithWrongCredentials" classname="tests.LoginTestNegative_5" time="2.293"/>
+  <testcase name="testUserIsAbleToLogOutFromTheApp" classname="tests.LogOutTest" time="4.424"/>
+  <testcase name="testUserIsAbleToAddProductToCart" classname="tests.AddProductToTheCart" time="4.137"/>
+  <testcase name="testUserIsAbleToRemoveProductsFromToCart" classname="tests.RemoveItemsFromCart" time="23.747"/>
+  <testcase name="testUserIsAbleToPlaceOrderWithOneProduct" classname="tests.CheckoutWithOneProduct" time="7.905"/>
+  <testcase name="testUserIsAbleToPlaceOrderWithThreeProducts" classname="tests.CheckoutWithThreeProducts" time="6.63"/>
+  <testcase name="validationCheckoutFields" classname="tests.CheckoutFieldsValidation" time="6.459"/>
+  <testcase name="testUserIsAbleToLogOutFromCheckoutPage" classname="tests.LogoutFromCheckoutPage" time="4.556"/>
+  <testcase name="testProductsAreSortedByAsc" classname="tests.SortByNamesAsc" time="3.339"/>
+  <testcase name="testProductsAreSortedByAsc" classname="tests.SortByNamesDesc" time="3.369"/>
+  <testcase name="testSortByPriceAsc" classname="tests.SortByPriceAsc" time="4.934"/>
+  <testcase name="testSortByPriceAsc" classname="tests.SortByPriceDesc" time="5.191"/>
 </testsuite>

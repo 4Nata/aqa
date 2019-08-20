@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import app.WebApp;
 import io.qameta.allure.Step;
 
 public class LoginPage extends AbstractBasePage {
@@ -47,13 +48,13 @@ public class LoginPage extends AbstractBasePage {
 	@Step("Enter {username} and {password}")
 	public LoginPage testLoginCredentials(String usermame, String password) {
 
-		WebDriverWait waiter1 = new WebDriverWait(getWebdriver(), 20);
+		WebDriverWait waiter1 = new WebDriverWait(WebApp.getBrowser(), 20);
 		waiter1.until(ExpectedConditions.elementToBeClickable(usernameInput));
 
-		WebDriverWait waiter2 = new WebDriverWait(getWebdriver(), 20);
+		WebDriverWait waiter2 = new WebDriverWait(WebApp.getBrowser(), 20);
 		waiter2.until(ExpectedConditions.elementToBeClickable(passwordInput));
 
-		WebDriverWait waiter3 = new WebDriverWait(getWebdriver(), 20);
+		WebDriverWait waiter3 = new WebDriverWait(WebApp.getBrowser(), 20);
 		waiter3.until(ExpectedConditions.elementToBeClickable(loginButton));
 
 		usernameInput.sendKeys(usermame);

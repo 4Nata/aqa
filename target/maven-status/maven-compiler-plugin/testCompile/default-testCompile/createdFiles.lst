@@ -12,12 +12,12 @@ tests/LoginTest.class
 app/WebApp.class
 tests/RemoveItemsFromCart.class
 pages/CartPage.class
-Tools/AllureReporter.class
 tests/LoginTestNegative_3.class
 pages/CheckoutStepOne.class
 tests/SortByPriceDesc.class
 tests/SortByNamesDesc.class
 tests/SortByNamesAsc.class
+tools/AllureReporter.class
 tests/LoginTestNegative_1.class
 tests/LoginTestNegative_5.class
 tests/SortByPriceAsc.class
@@ -25,8 +25,8 @@ tests/GenericTest.class
 pages/ProductsPage.class
 pages/CheckoutComplete.class
 tests/LogoutFromCheckoutPage.class
-Tools/BrowserFactory.class
-Tools/WebElementUtils.class
+tools/WebElementUtils.class
 tests/CheckoutFieldsValidation.class
+tools/BrowserFactory.class
 tests/CheckoutWithThreeProducts.class
 pages/LoginPage.class

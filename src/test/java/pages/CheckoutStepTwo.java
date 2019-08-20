@@ -3,9 +3,7 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-import app.WebApp;
 import io.qameta.allure.Step;
 
 public class CheckoutStepTwo extends AbstractBasePage {

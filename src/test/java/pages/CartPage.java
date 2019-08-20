@@ -5,10 +5,8 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 import app.WebApp;
 import io.qameta.allure.Step;
@@ -42,7 +40,7 @@ public class CartPage extends AbstractBasePage {
 
 		for (int i = 0; i < productNames.length; i++) {
 
-			getWebdriver().findElement(By.xpath("//div[@class='cart_item_label']//div[contains(text(), '"
+			WebApp.getBrowser().findElement(By.xpath("//div[@class='cart_item_label']//div[contains(text(), '"
 					+ productNames[i]
 					+ "')]//ancestor::div[@class='cart_item_label']/descendant::button[@class='btn_secondary cart_button']"))
 					.click();
@@ -78,7 +76,7 @@ public class CartPage extends AbstractBasePage {
 		return names;
 
 	}
-	
+
 	@Step("Observe all the products prices")
 	public List<Double> getProductsPrices() {
 		List<Double> prices = new ArrayList<>();
