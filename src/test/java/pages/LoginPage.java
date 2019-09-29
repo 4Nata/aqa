@@ -17,7 +17,7 @@ public class LoginPage extends AbstractBasePage {
 	@FindBy(id = "password")
 	private WebElement passwordInput;
 	@FindBy(css = "input[value='LOGIN']")
-	private WebElement loginButton;
+	protected WebElement loginButton;
 	@FindBy(css = "h3[data-test='error']")
 	private WebElement errorMessageWithoutLoginAndPassword;
 

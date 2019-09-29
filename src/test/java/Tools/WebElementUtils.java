@@ -23,6 +23,32 @@ public class WebElementUtils {
 //	    element.sendKeys(org.openqa.selenium.Keys.CONTROL);
 //	    element.click();
 		
+	
+	
+//	public static final long TIME_SECONDS_LIMIT = 30;
+//	public static final long SLEEP_IN_MILLIS = 2000;
+//
+//
+//	protected void clickAndWaitForAppear(WebElement currentElement WebElement expectedElement) {
+//	   getDriverWait().until(ExpectedConditions.elementToBeClickable(currentElement));
+//	   currentElement.click();
+//	   getDriverWait().until(ExpectedConditions.visibilityOf(expectedElement);
+//	}
+//
+//	private WebDriverWait getDriverWait() {
+//	   return new WebDriverWait(getDriver(), TIME_SECONDS_LIMIT, SLEEP_IN_MILLIS);
+//	}------------------------------------------------------------------------------------------------------------- (edited) 
+//	
+//	@Step(“Click [Logout] button to logout from the app”)
+//	   public LoginPage logout() {
+//
+//	      clickAndWaitForAppear(menuButton,logoutButton);
+//	      clickAndWaitForAppear(logoutButton,LoginPageLocator);
+//	       return new LoginPage();
+//
+//	   }
+//
+//}
+		
 	}
-
 }

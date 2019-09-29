@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="smoke" parallel="tests" thread-count="1">
+<suite name="smoke" parallel="tests" thread-count="2">
 	<test name="Success Login">
 		<classes>
 			<class name="tests.LoginTest" />

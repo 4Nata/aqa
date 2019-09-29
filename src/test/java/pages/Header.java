@@ -25,6 +25,8 @@ public class Header extends AbstractBasePage {
 	@FindBy(xpath = "//a[@id='logout_sidebar_link']")
 	private WebElement logoutButton;
 
+	LoginPage loginPage = new LoginPage();
+
 	public Header() {
 		super();
 	}
@@ -54,6 +56,16 @@ public class Header extends AbstractBasePage {
 		return new LoginPage();
 
 	}
+
+//	@Step("Click [Logout] button to logout from the app")
+//	public LoginPage logout() {
+//
+//		clickAndWaitForAppear(menuButton, logoutButton);
+//		clickAndWaitForAppear(logoutButton, loginPage.loginButton);
+//
+//		return new LoginPage();
+//
+//	}
 
 	@Step("Open Cart")
 	public CartPage openCart() {
